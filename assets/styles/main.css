@@ -1,0 +1,37 @@
+@import './global.css';
+
+body{
+    margin: auto;
+    width: 80%;
+    background-color: var(--primaryColorBackground);
+}
+.main {
+    height: 400px;
+    margin: auto;
+    background: linear-gradient(to top right, #723fb1, #8353a0);
+}
+
+.chameleon-gradient {
+    width: 100%;
+    height: 100vh;
+  }
+  .row{
+    display: flex;
+    
+  }
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .card {
+    
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Borda fina */
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para efeito de elevação */
+  }
+  
+  
