@@ -50,5 +50,25 @@ body{
     width: 50%;
 }
 
-  
-  
+/* --------------------------------   */
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+  .main {
+    width: 90%; /* Reduza a largura do conteúdo principal */
+  }
+
+  .row {
+    flex-direction: column; /* Altere a direção da flexão para empilhar as seções */
+  }
+
+  .card {
+    width: 100%; /* Ocupa toda a largura disponível em dispositivos móveis */
+    margin: 2% 0; /* Adicione margens entre os cartões */
+  }
+
+  .small-card {
+    width: 100%; /* Ocupa toda a largura disponível em dispositivos móveis */
+    margin: 2% 0; /* Adicione margens entre os cartões */
+  }
+}
