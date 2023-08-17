@@ -1,31 +1,42 @@
 @import './global.css';
 
 body{
-    margin: auto;
-    width: 80%;
-    background-color: var(--primaryColorBackground);
-    color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+    /* background-color: var(--primaryColorBackground);
+    color: white; */
 }
 .main {
-    /* margin: auto; */
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+
 }
 
 
-  .row{
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+    margin: 1%;
+}
+  .cardContent {
     display: flex;
-    justify-content: space-between;
-  }
-  .card-container {
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
   }
   .card {    
-    border: 2px solid rgba(0, 0, 0, 0.1); /* Borda fina */
+    border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    text-align: center;
     padding: 3%;
     /* width: 33%; */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para efeito de elevação */
+  }
+  .skill{
+    
   }
   /* Estilo para o cartão pequeno */
 .small-card {
