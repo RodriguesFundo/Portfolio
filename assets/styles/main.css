@@ -4,7 +4,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 75%;
 
 }
 
@@ -18,17 +18,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
   .card {    
+
     border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     text-align: center;
     padding: 3%;
-    /* width: 33%; */
+    height: 30rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para efeito de elevação */
   }
   .skill{
-    
+    /* width: 100%  ; */
   }
   /* Estilo para o cartão pequeno */
 .small-card {
