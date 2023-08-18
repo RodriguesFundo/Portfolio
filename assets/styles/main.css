@@ -1,5 +1,11 @@
 @import './global.css';
 
+.dl{
+  position: fixed;
+  top: 11px;
+  right: 10px;
+  font-size: x-large;
+}
 
 .main {
   display: flex;
@@ -29,19 +35,40 @@
     height: 30rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para efeito de elevação */
   }
-  .skill{
-    /* width: 100%  ; */
-  }
-  /* Estilo para o cartão pequeno */
-.small-card {
-    width: 25%;
-    margin-left: 1%;
-}
+
 
 
 /* Estilo para o cartão grande */
 .large-card {
     width: 50%;
+}
+.large-card h1 {
+  padding: 2.7rem;
+  font-size: 6rem;
+}
+.large-card h2 {
+  margin-top: 1rem;
+  /* padding-top: 2rem; */
+}
+
+.icon-wrapper i{
+  font-size: 15rem;
+  padding: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+
+  /* Estilo para o cartão pequeno */
+.small-card {
+    width: 25%;
+    margin-left: 1%;
+    text-decoration: overline;
+}
+.small-card h2{
+  font-weight: normal;
+
+  margin-top: 5%;
+  font-size: 3rem;
 }
 
 /* --------------------------------   */
