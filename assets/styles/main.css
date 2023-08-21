@@ -19,6 +19,12 @@
   flex-direction: row;
   justify-content: space-between;
     margin: 1%;
+    /* padding: 1%; */
+}
+
+.row a{
+  
+  width: 100%;
 }
   .cardContent {
     display: flex;
