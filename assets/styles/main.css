@@ -4,7 +4,32 @@
   position: fixed;
   top: 11px;
   right: 10px;
+  border-radius: 7px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
   font-size: x-large;
+  padding: 0rem 0.1rem ;
+  height: 4.5rem;
+}
+.dl a{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  
+}
+.dl p{
+  display: flex;
+  align-items: center;
+  color: rgba(248, 248, 255, 0.656);
+  border-radius: 15px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+  font-size: medium;
+  height: 4rem;
+  padding: 0 1.8rem;
+  background-color: #4c4f5a88;
+
+
 }
 
 .main {
@@ -35,14 +60,12 @@
   .card {    
 
     border: 2px solid rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 10px;
     text-align: center;
     padding: 3%;
     height: 30rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para efeito de elevação */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9); /* Sombra para efeito de elevação */
   }
-
-
 
 /* Estilo para o cartão grande */
 .large-card {
@@ -68,7 +91,6 @@
 .small-card {
     width: 25%;
     margin-left: 1%;
-    text-decoration: overline;
 }
 .small-card h2{
   font-weight: normal;

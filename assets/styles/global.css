@@ -7,21 +7,24 @@
 
 
 :root{
-
+  
     --primaryColorBackground:#21232c;
     --secondaryColorBackground: #2b2e3b;
+    --primaryTextColor: white;
+    --secondaryTextColor: #00EDFC;
     font-size: 62.5%;
     /* background: linear-gradient(to top right, #723fb1, #8353a0); */ 
 }
 
 body{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   font-size: 1.6rem;
-    /* background-color: var(--primaryColorBackground);
-    color: white; */
+  background-color: var(--primaryColorBackground);
+  color: var(--primaryTextColor); 
 }
 
 input, button {
@@ -30,7 +33,7 @@ input, button {
 
 a {
   text-decoration: none;
-  color: black;
+  color: var(--primaryTextColor);
 }
 
 ul {
