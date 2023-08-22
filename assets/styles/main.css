@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   width: 75%;
-
+  /* background-color: var(--primaryColorBackground); */
 }
 
 .row{
@@ -80,6 +80,39 @@
 /* --------------------------------   */
 
 /* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+  .main {
+      width: 90%; /* Reduza a largura do conteúdo principal */
+  }
+
+  .row {
+      flex-direction: column; /* Altere a direção da flexão para empilhar as seções */
+  }
+
+  .card {
+      width: 100%; /* Ocupa toda a largura disponível em dispositivos móveis */
+      margin: 2% 0; /* Adicione margens entre os cartões */
+      height: auto; /* A altura será ajustada automaticamente pelo conteúdo */
+  }
+
+  .small-card {
+      width: 100%; /* Ocupa toda a largura disponível em dispositivos móveis */
+      margin: 2% 0; /* Adicione margens entre os cartões */
+  }
+
+  .large-card h1 {
+      font-size: 4rem; /* Reduza o tamanho da fonte do título */
+      padding: 1.5rem; /* Reduza o espaçamento do título */
+  }
+
+  .small-card h2 {
+      font-size: 2rem; /* Reduza o tamanho da fonte do subtítulo */
+  }
+
+  .icon-wrapper i {
+      font-size: 8rem; /* Reduza o tamanho do ícone */
+  }
+}
 @media (max-width: 768px) {
   .main {
     width: 90%; /* Reduza a largura do conteúdo principal */
