@@ -20,14 +20,15 @@
 .dl p{
   display: flex;
   align-items: center;
-  color: rgba(248, 248, 255, 0.656);
+  color: black;
   border-radius: 15px;
   border: 4px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
-  font-size: medium;
+  font-size: large;
+  font-weight: bold;
   height: 4rem;
   padding: 0 1.8rem;
-  background-color: #4c4f5a88;
+  background: var(--secondaryTextColor);
 
 
 }
