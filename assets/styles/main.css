@@ -42,6 +42,12 @@
   /* background-color: var(--primaryColorBackground); */
 }
 
+.hero{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .row{
   display: flex;
   flex-direction: row;
