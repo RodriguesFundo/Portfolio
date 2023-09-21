@@ -795,10 +795,10 @@ p {
 }
 
 /*--------------------------------------------------------------
-# Journal
+# articles
 --------------------------------------------------------------*/
-#journal,
-#journal-blog {
+#articles,
+#articles-blog {
   height: auto;
   width: 100%;
   background: #f7f7f7;
@@ -806,31 +806,31 @@ p {
   position: relative;
 }
 
-#journal-blog {
+#articles-blog {
   background: #fff;
   padding-bottom: 30px;
 }
 
-#journal .journal-block {
+#articles .articles-block {
   display: inline-block;
   height: auto;
   width: 100%;
 }
 
-#journal .journal-block .journal-info {
+#articles .articles-block .articles-info {
   position: relative;
 }
 
-.journal-block .journal-info img {
+.articles-block .articles-info img {
   max-width: 100%;
 }
 
-.journal-block .journal-info .journal-txt {
+.articles-block .articles-info .articles-txt {
   padding: 25px 0px;
   position: relative;
 }
 
-.journal-block .journal-info .journal-txt h4 a {
+.articles-block .articles-info .articles-txt h4 a {
   display: block;
   font-size: 19px;
   line-height: 24px;
@@ -840,19 +840,19 @@ p {
   transition: all 0.5s ease-in-out 0s;
 }
 
-.journal-block .journal-info .journal-txt h4 a:hover {
+.articles-block .articles-info .articles-txt h4 a:hover {
   color: #b8a07e;
   transition: all 0.5s ease-in-out 0s;
 }
 
-.journal-block .journal-info .journal-txt p {
+.articles-block .articles-info .articles-txt p {
   margin: 0;
   font-size: 14px;
   line-height: 24px;
 }
 
 /*--------------------------------------------------------------
-# Journal
+# articles
 --------------------------------------------------------------*/
 #contact {
   height: auto;
@@ -944,7 +944,7 @@ p {
 /*-----------------------------------------------------------------------------------*/
 /*  /* Single page */
 /*-----------------------------------------------------------------------------------*/
-#journal-blog {
+#articles-blog {
   padding-top: 140px;
 }
 
@@ -969,7 +969,7 @@ p {
   width: 100%;
 }
 
-.journal-txt h4 a {
+.articles-txt h4 a {
   display: block;
   font-size: 19px;
   line-height: 24px;
@@ -979,7 +979,7 @@ p {
   transition: all 0.5s ease-in-out 0s;
 }
 
-.journal-txt h4 a:hover {
+.articles-txt h4 a:hover {
   color: #b8a07e;
   transition: all 0.5s ease-in-out 0s;
 }
@@ -1189,8 +1189,8 @@ blockquote {
     display: inline-block;
   }
 
-  /* journal */
-  #journal .journal-block .journal-info {
+  /* articles */
+  #articles .articles-block .articles-info {
     margin-bottom: 30px;
   }
 
@@ -1272,8 +1272,8 @@ blockquote {
     display: inline-block;
   }
 
-  /* journal */
-  #journal .journal-block .journal-info {
+  /* articles */
+  #articles .articles-block .articles-info {
     margin-bottom: 30px;
   }
 
@@ -1355,8 +1355,8 @@ blockquote {
     display: inline-block;
   }
 
-  /* journal */
-  #journal .journal-block .journal-info {
+  /* articles */
+  #articles .articles-block .articles-info {
     margin-bottom: 30px;
   }
 
@@ -1437,8 +1437,8 @@ blockquote {
     margin: 20px;
   }
 
-  /* journal */
-  #journal .journal-block .journal-info {
+  /* articles */
+  #articles .articles-block .articles-info {
     margin-bottom: 30px;
   }
 
@@ -1519,8 +1519,8 @@ blockquote {
     margin: 20px;
   }
 
-  /* journal */
-  #journal .journal-block .journal-info {
+  /* articles */
+  #articles .articles-block .articles-info {
     margin-bottom: 30px;
   }
 
