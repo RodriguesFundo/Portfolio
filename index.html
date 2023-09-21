@@ -1,182 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nice to meet you!</title>
-    <link rel="stylesheet" href="./assets/styles/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Nice to meet you!</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,500,500i,600,600i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  
 </head>
+
 <body>
-    <div class="dl">
-        <a href="#">
-            <p>Download My CV</p>
-            <i class="fas fa-download"></i>
-        </a>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html"><strong>Rodrigues</strong> Fundo</a></h1>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
+          <li><a class="nav-link scrollto" href="#about">Sobre mim</a></li>
+          <li><a class="nav-link  scrollto" href="#portfolio">Projectos</a></li>
+          <li><a class="nav-link  scrollto" href="#journal">Artigos</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
     </div>
-    <!-- Hero -->
-    <main class="main">
-        <div class="hero">
+  </header><!-- End Header -->
 
-            <section class="row">
-                <!-- Introdução -->
-                <section class="large-card" id="introduction">
-                    <a href="" class="card cardContent">
-                        <h1>Rodrigues  Fundo</h1>
-                        <h2>&lt;Mobile Developer  <strong>/&gt;</strong></h2>
-                    </a>
-                </section>
-                
-                <!-- Sobre Mim -->
-                <section class="small-card" id="aboutMe">
-                    <a href="" class="card cardContent" >
-                        <div class="icon-wrapper">
-                            <i class="ph-thin ph-user"></i>
-                        </div>
-                        
-                        <h2>About Me</h2>
-                    </a>
-                </section>
-                
-                <!-- Projetos -->
-                <section class="small-card" id="projects">
-                    <!-- Conteúdo dos projetos -->
-                    <a href="#" class="card cardContent" >
-                        <div class="icon-wrapper">
-                            <i class="ph-thin ph-code"></i>
-                        </div>
-                        <h2>Projects</h2>
-                    </a>                
-                    
-                </section>
-            </section>
-            
-            <section class="row">
-                <!-- Habilidades -->
-                <section class="card large-card " id="mySkills">
-                    <a href="#" class="">
-    
-                        
-    
-    
-                        <div class="row">
-                            <div class="skill">
-                                <i class="fab fa-html5 fa-5x" alt="HTML5 Logo"></i>
-        
-                                <hr>
-                                <p>HTML5</p>
-                            </div>
-                            <div class="skill">
-                                <i class="fab fa-css3-alt fa-5x"></i>
-                                <hr>
-                                <p>CSS</p>
-                            </div>
-                            <div class="skill">
-                                <i class="fab fa-js fa-5x"></i>
-                                <hr>
-                                <p>JavaScript</p>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="skill">
-                                <i class="fab fa-react fa-5x"></i>
-                                <hr>
-                                <p>React Native</p>
-                            </div>
-                            <div class="skill">
-                                <i class="fas fa-database fa-5x"></i>
-                                <hr>
-                                <p>SQL</p>
-                                
-                            </div>
-                            <div class="skill">
-                                <i class="fab fa-cuttlefish fa-5x"></i>
-                                <hr>
-                                <p>C#</p>
-                            </div>
-                        </div>
-                    </a>
-                </section>
-                
-                
-                <!-- Artigos -->
-                <section class=" small-card" id="articles">
-                    <!-- Conteúdo dos artigos -->
-                    <a href="#" class="card cardContent">
-                        <div class="icon-wrapper">
-                            <i class="ph-thin ph-article"></i>
-                        </div>
-                        <h2>Articles</h2>
-                    </a>
-                </section>
-                
-                <!-- Contato -->
-                <section class="small-card" id="contact">
-                    <!-- Formulário de contato ou informações de contato -->
-                    <a href="" class="card cardContent">
-                        <div class="icon-wrapper">
-                            <i class="ph-thin ph-envelope"></i>
-                        </div>
-                        
-                        <h2>Contact</h2>
-                    </a>
-                </section>
-            </section>
+  <!-- ======= Hero Section ======= -->
+  <div id="hero" class="home">
+
+    <div class="container">
+      <div class="hero-content">
+        <h1>I'm <span class="typed" data-typed-items="Rodrigues Fundo, Mobile Developer"></span></h1>
+        <p>Desenvolvedor mobile📱 : React Native</p>
+
+        <ul class="list-unstyled list-social">
+          <li><a href="https://web.facebook.com/rodrigues.domingos.92/" target="_blank"><i class="bi bi-facebook"></i></a></li>
+          <li><a href="https://www.instagram.com/rodrigues_fundo/" target="_blank"><i class="bi bi-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/rodriguesfundo/"><i class="bi bi-linkedin"></i></a></li>
+          <li><a href="https://github.com/RodriguesFundo" target="_blank"><i class="bi bi-github"></i></a></li>
+
+        </ul>
+      </div>
+    </div>
+  </div><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <div id="about" class="paddsection">
+      <div class="container">
+        <div class="row justify-content-between">
+
+          <div class="col-lg-4 ">
+            <div class="div-img-bg">
+              <div class="about-img">
+                <img src="assets/img/home.jpeg" class="img-responsive" alt="me">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="about-descr">
+
+              <p class="p-heading">Sou um Desenvolvedor Mobile, com experiencia em React Native</p>
+              <p class="separator">Sou um jovem estudante na area de Desenvolvimento de Software. Sou proficiente em React Native, C# e Java para desenvolvimento de aplicativos para Android e iOS.</p>
+
+            </div>
+
+          </div>
         </div>
-       
-    
-    
-        <section class="apresentation">
-            <!-- Apresentation -->
-            <div>
-                <div>
-                    <p>Hello, i'm</p>
-                    <h1>Rodrigues Fundo</h1>
-                    <div>
-                        <p>Mobile Developer</p>      
-                        <i></i>         
-                        <img src="" alt="react-native Icon">
-                    </div>
-                </div>
-                <div>
-                    <p>Aspirante ...</p>
-                    <div class="iconsContact">
-                        <a href="#"><i></i></a>
-                        <a href="#"><i></i></a>
-                        <a href="#"><i></i></a>
-                        <a href="#"><i></i></a>
-                        icons Contact
-                    </div>
-                    <button>buttonCV</button>
-                </div>
+      </div>
+    </div><!-- End About Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <div id="skills">
+      <div class="container">
+
+        <div class="skills-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="skills-block">
+                <i class="bi bi-briefcase"></i>
+                <span>HTML</span>
+                <p class="separator">To an English person, it will seem like simplified English,told me what </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="skills-block">
+                <i class="bi bi-card-checklist"></i>
+                <span>BRAND IDENTITY</span>
+                <p class="separator">To an English person, it will seem like simplified English,told me what </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="skills-block">
+                <i class="bi bi-bar-chart"></i>
+                <span>WEB DESIGN</span>
+                <p class="separator">To an English person, it will seem like simplified English,told me what </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="skills-block">
+                <i class="bi bi-binoculars"></i>
+                <span>MOBILE APPS</span>
+                <p class="separator">To an English person, it will seem like simplified English,told me what </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="skills-block">
+                <i class="bi bi-brightness-high"></i>
+                <span>Analytics</span>
+                <p class="separator">To an English person, it will seem like simplified English,told me what </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="skills-block">
+                <i class="bi bi-calendar4-week"></i>
+                <span>PHOTOGRAPHY</span>
+                <p class="separator">To an English person, it will seem like simplified English,told me what </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </div><!-- End Skills Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <div id="portfolio" class="paddsection">
+
+      <div class="container">
+        <div class="section-title text-center">
+          <h2>My Portfolio</h2>
+        </div>
+      </div>
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 1</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
-            
-            <!-- Picture -->
-            <div class="profile-pic">
-                
-                <img src="./assets/img/hero1.png" alt="My profile picture">
-            
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
-              
-        </section>
-    </main>
+          </div>
 
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 2</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
 
-    
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Card 2</h4>
+              <p>Card</p>
+              <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
 
-    <!-- <i class="ph ph-whatsapp-logo"></i>
-    <i class="ph-light ph-whatsapp-logo"></i>  
-    <i class="ph-light ph-facebook-logo"></i>
-    <i class="ph-light ph-instagram-logo"></i>
-    <i class="ph-light ph-linkedin-logo"></i>
-    <i class="ph-light ph-github-logo"></i>-->
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web 2</h4>
+              <p>Web</p>
+              <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
 
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 3</h4>
+              <p>App</p>
+              <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
 
-    
+        </div>
+
+      </div>
+
+    </div><!-- End Portfolio Section -->
+
+    <!-- ======= Journal Section ======= -->
+    <div id="journal" class="text-left paddsection">
+
+      <div class="container">
+        <div class="section-title text-center">
+          <h2>journal</h2>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="journal-block">
+          <div class="row">
+
+            <div class="col-lg-4 col-md-6">
+              <div class="journal-info">
+
+                <a href="blog-single.html"><img src="assets/img/blog-post-1.jpg" class="img-responsive" alt="img"></a>
+
+                <div class="journal-txt">
+
+                  <h4><a href="blog-single.html">SO LETS MAKE THE MOST IS BEAUTIFUL</a></h4>
+                  <p class="separator">To an English person, it will seem like simplified English
+                  </p>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="journal-info">
+
+                <a href="blog-single.html"><img src="assets/img/blog-post-2.jpg" class="img-responsive" alt="img"></a>
+
+                <div class="journal-txt">
+
+                  <h4><a href="blog-single.html">WE'RE GONA MAKE DREAMS COMES</a></h4>
+                  <p class="separator">To an English person, it will seem like simplified English
+                  </p>
+
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="journal-info">
+
+                <a href="blog-single.html"><img src="assets/img/blog-post-3.jpg" class="img-responsive" alt="img"></a>
+
+                <div class="journal-txt">
+
+                  <h4><a href="blog-single.html">NEW LIFE CIVILIZATIONS TO BOLDLY</a></h4>
+                  <p class="separator">To an English person, it will seem like simplified English
+                  </p>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div><!-- End Journal Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <div id="contact" class="paddsection">
+      <div class="container">
+        <div class="contact-block1">
+          <div class="row">
+
+            <div class="col-lg-6">
+              <div class="contact-contact">
+
+                <h2 class="mb-30">GET IN TOUCH</h2>
+
+                <ul class="contact-details">
+                  <li><span>23 Main, Street</span></li>
+                  <li><span>New York, United States</span></li>
+                  <li><span>+88 01912704287</span></li>
+                  <li><span>example@example.com</span></li>
+                </ul>
+
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <div class="row gy-3">
+
+                  <div class="col-lg-6">
+                    <div class="form-group contact-block1">
+                      <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <textarea class="form-control" name="message" placeholder="Message" required></textarea>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-12">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                  </div>
+
+                  <div class="mt-0">
+                    <input type="submit" class="btn btn-defeault btn-send" value="Send message">
+                  </div>
+
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <div id="footer" class="text-center">
+    <div class="container">
+      <div class="socials-media text-center">
+
+        <ul class="list-unstyled">
+          <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+          <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+          <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+          <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+        </ul>
+
+      </div>
+
+      <p>&copy; Copyrights Folio. All rights reserved.</p>
+
+      <div class="credits">
+        <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Folio
+      -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+
+    </div>
+  </div><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>
