@@ -601,6 +601,13 @@ p {
   display: block;
 }
 
+.skills-block img{
+  width: 35%;
+  margin: 0 32%;
+}
+
+
+
 .skills-block .separator {
   margin: 0;
   font-size: 13px;
