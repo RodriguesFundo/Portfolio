@@ -688,33 +688,27 @@ p {
   }
 }
 #portfolio .portfolio-item:nth-child(1){
-  /* border: solid green; */
   background: url('../img/Projectos/mySkills.png') repeat scroll center/cover;
 
 }
 #portfolio .portfolio-item:nth-child(2){
-  /* border: solid green; */
   background: url('../img/Projectos/DevShop.png') repeat scroll center/cover;
 
 }
 #portfolio .portfolio-item:nth-child(3){
-  /* border: solid green; */
   background: url('../img/Projectos/cli.webp') repeat scroll center/cover;
 
 }
 #portfolio .portfolio-item:nth-child(4){
-  /* border: solid green; */
   background: url('../img/Projectos/goFinances.png') repeat scroll center/cover;
 
 }
 #portfolio .portfolio-item:nth-child(5){
-  /* border: solid green; */
   background: url('../img/Projectos/cli.webp') repeat scroll center/cover;
 
 }
 #portfolio .portfolio-item:nth-child(6){
-  /* border: solid green; */
-  background: url('../img/Projectos/cli.webp') repeat scroll center/cover;
+  background: url('../img/Projectos/chaos-soccer.jpg') repeat scroll center/cover;
 
 }
 
