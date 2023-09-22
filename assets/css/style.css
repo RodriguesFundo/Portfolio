@@ -689,12 +689,12 @@ p {
 }
 #portfolio .portfolio-item:nth-child(1){
   /* border: solid green; */
-  background: url('../img/Projectos/cli.webp') repeat scroll center/cover;
+  background: url('../img/Projectos/mySkills.png') repeat scroll center/cover;
 
 }
 #portfolio .portfolio-item:nth-child(2){
   /* border: solid green; */
-  background: url('../img/Projectos/cli.webp') repeat scroll center/cover;
+  background: url('../img/Projectos/DevShop.png') repeat scroll center/cover;
 
 }
 #portfolio .portfolio-item:nth-child(3){
@@ -862,11 +862,13 @@ p {
 
 .articles-block .articles-info img {
   max-width: 100%;
+  height: 230px;
 }
 
 .articles-block .articles-info .articles-txt {
   padding: 25px 0px;
   position: relative;
+  margin: 5px 0;
 }
 
 .articles-block .articles-info .articles-txt h4 a {
