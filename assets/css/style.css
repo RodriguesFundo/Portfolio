@@ -836,9 +836,81 @@ p {
 }
 
 
+/* Estilo para cada estágio da experiência profissional */
+.experiencia-info {
+  background-color: #939ea3; 
+  padding: 20px; 
+  margin-bottom: 20px;
+  border-radius: 8px; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+  /* width: calc(50% - 25px);  */
+  display: flex;
+  flex-direction: column; 
+  vertical-align: top; 
+  margin-right: 30px; 
+}
+
+/* Adicionando estilos para a imagem/logotipo */
+.experiencia-info img {
+  width: 100px; /* Defina a largura desejada para a imagem/logotipo */
+  margin-bottom: 10px; /* Espaçamento inferior entre a imagem/logotipo e o título */
+  
+}
+
 #experiencia-profissional{
   background: #1d1f20;
 }
+
+#experiencias-row{
+  display: flex;
+  flex-direction: row;
+}
+
+/* Estilo para limpar a margem da última caixa em cada linha */
+.experiencia-info:nth-child(2n) {
+  margin-right: 0; 
+}
+
+#experiencia-profissional h2 {
+  color: #fff;
+}
+
+.experiencia-info h3 {
+  font-size: 20px; /* Tamanho da fonte do título */
+  margin-bottom: 10px; /* Espaçamento inferior do título */
+  /* color: #fff; */
+}
+
+.experiencia-info:hover img {
+  transform: scale(1.5);
+  transition: transform 0.9s ease;
+}
+.experiencia-info p {
+  margin-bottom: 5px; /* Espaçamento inferior do parágrafo */
+}
+
+/* Media query para telas menores */
+@media screen and (max-width: 768px) {
+  #experiencias-row{
+    flex-direction: column; /* Colocar os itens em coluna */
+  }
+  .experiencia-info {
+    width: 100%; /* Alterar a largura para ocupar 100% da largura da tela */
+    margin-right: 0; /* Remover a margem direita */
+    margin-bottom: 20px; /* Adicionar margem inferior */
+  }
+  .experiencia-info img{
+    margin-left: auto; /* Centralizar horizontalmente */
+    margin-right: auto; /* Centralizar horizontalmente */
+  }
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 
 /*--------------------------------------------------------------
 # articles
