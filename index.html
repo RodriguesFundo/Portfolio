@@ -195,6 +195,46 @@
           <button class="filter-btn" data-filter="web">Web</button>
           <button class="filter-btn" data-filter="desktop">Desktop</button>
         </div>
+        <!-- Controls (NOVO) -->
+        <div class="projects-controls">
+          <div class="controls-left">
+            <input
+              id="projects-search"
+              type="search"
+              placeholder="Pesquisar projetos..."
+              aria-label="Pesquisar projetos"
+            />
+            <select id="projects-sort" aria-label="Ordenar projetos">
+              <option value="featured">Destaque</option>
+              <option value="title-asc">Título (A–Z)</option>
+              <option value="title-desc">Título (Z–A)</option>
+              <option value="recent">Mais recentes</option>
+            </select>
+          </div>
+          <div
+            class="controls-right"
+            role="group"
+            aria-label="Modo de visualização"
+          >
+            <button
+              class="view-btn active"
+              data-view="grid"
+              title="Grade"
+              aria-pressed="true"
+            >
+              <i class="fas fa-th"></i>
+            </button>
+            <button
+              class="view-btn"
+              data-view="list"
+              title="Lista"
+              aria-pressed="false"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+
         <div class="projects-grid" id="projects-container">
           <!-- Projects will be loaded by JavaScript -->
         </div>
