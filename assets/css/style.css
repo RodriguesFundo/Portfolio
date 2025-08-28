@@ -559,6 +559,11 @@ body {
   align-items: center;
   gap: 10px;
 }
+.skill-category.animate-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: var(--transition-smooth);
+}
 
 .skill-list {
   display: grid;
