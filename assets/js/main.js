@@ -575,9 +575,8 @@ document.addEventListener("keydown", function (e) {
 
 // Monitor page load performance
 window.addEventListener("load", function () {
-  const loadTime =
-    performance.timing.loadEventEnd - performance.timing.navigationStart;
-  console.log(`Page loaded in ${loadTime}ms`);
+  const loadTime = performance.now();
+  console.log(`Page loaded in ${Math.round(loadTime)}ms`);
 
   // Track Core Web Vitals if available
   if ("web-vital" in window) {
