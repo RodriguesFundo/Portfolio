@@ -7,7 +7,6 @@ function initializeExperience() {
   if (!container) return;
 
   renderExperience(container);
-  console.log("Experience component initialized");
 
   if (typeof initIntersectionObserver === "function") {
     try {

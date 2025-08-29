@@ -6,7 +6,6 @@ function initializeProjects() {
   const container = document.getElementById("projects-container");
   if (!container) return;
 
-  // --- DADOS: usa teus dados atuais; podes acrescentar mais depois
   const projectsData = [
     {
       title: "App Saúde Digital",
@@ -32,7 +31,6 @@ function initializeProjects() {
     },
   ];
 
-  // estado simples
   const state = {
     all: projectsData.map(normalize),
     current: [],
@@ -42,18 +40,14 @@ function initializeProjects() {
     view: "grid",
   };
 
-  // render inicial
   state.current = [...state.all];
   renderProjects(container, state.current);
 
-  // ligar filtros
   setupProjectFiltering(state, container);
-  // ligar busca/ordenar/view apenas se existirem no HTML
   setupProjectSearch(state, container);
   setupProjectSorting(state, container);
   setupViewToggle(state, container);
 
-  // re-anexar observer (para animações .animate-in / .show)
   if (typeof initIntersectionObserver === "function") {
     try {
       initIntersectionObserver();
@@ -62,7 +56,6 @@ function initializeProjects() {
     }
   }
 
-  console.log("Projects component initialized (minimal)");
 }
 
 function normalize(p) {

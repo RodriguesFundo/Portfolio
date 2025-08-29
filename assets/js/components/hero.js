@@ -1,6 +1,3 @@
-// ==============================================
-// HERO.JS - HERO COMPONENT
-// ==============================================
 document.addEventListener("DOMContentLoaded", () => {
   initializeHero();
 });
@@ -11,7 +8,6 @@ function initializeHero() {
 
   renderHero(mount);
 
-  // Reanexa observer para .hero-content, etc.
   if (typeof initIntersectionObserver === "function") {
     try {
       initIntersectionObserver();
@@ -19,8 +15,6 @@ function initializeHero() {
       console.error(e);
     }
   }
-
-  console.log("Hero component initialized");
 }
 
 function renderHero(container) {
@@ -71,7 +65,6 @@ function renderHero(container) {
     </div>
   `;
 
-  // Se já estiver visível, marca
   const r = container.getBoundingClientRect();
   if (r.top < window.innerHeight && r.bottom > 0) {
     container.classList.add("animate-in", "show");

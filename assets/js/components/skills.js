@@ -1,8 +1,3 @@
-// ==============================================
-// SKILLS.JS - SKILLS COMPONENT
-// ==============================================
-
-// Skills data structure
 const skillsData = {
   frontend: {
     title: "Frontend Development",
@@ -180,10 +175,6 @@ const skillsData = {
   },
 };
 
-// ==============================================
-// SKILLS INITIALIZATION
-// ==============================================
-
 document.addEventListener("DOMContentLoaded", function () {
   initializeSkills();
 });
@@ -198,13 +189,7 @@ function initializeSkills() {
 
   renderSkills(skillsContainer);
   setupSkillsAnimations();
-
-  console.log("Skills component initialized");
 }
-
-// ==============================================
-// RENDER SKILLS
-// ==============================================
 
 function renderSkills(container) {
   container.innerHTML = "";
@@ -259,14 +244,9 @@ function createSkillItem(skill) {
     `;
 }
 
-// ==============================================
-// SKILLS ANIMATIONS
-// ==============================================
-
 function setupSkillsAnimations() {
   const skillCategories = document.querySelectorAll(".skill-category");
 
-  // Set up intersection observer for skill animations
   const observerOptions = {
     threshold: 0.3,
     rootMargin: "0px 0px -50px 0px",
@@ -290,18 +270,15 @@ function animateSkillCategory(categoryElement) {
   const skillItems = categoryElement.querySelectorAll(".skill-item");
   const progressBars = categoryElement.querySelectorAll(".skill-progress-fill");
 
-  // Animate skill items with stagger effect
   skillItems.forEach((item, index) => {
     setTimeout(() => {
       item.style.opacity = "1";
       item.style.transform = "translateY(0)";
 
-      // Add hover effects after animation
       addSkillHoverEffects(item);
     }, index * 100);
   });
 
-  // Animate progress bars
   setTimeout(() => {
     animateProgressBars(progressBars);
   }, 200);
@@ -313,7 +290,6 @@ function animateProgressBars(progressBars) {
       const percentage = bar.dataset.percentage;
       bar.style.width = percentage;
 
-      // Add percentage counter animation
       animatePercentageCounter(bar, percentage);
     }, index * 150);
   });
@@ -325,8 +301,8 @@ function animatePercentageCounter(progressBar, targetPercentage) {
   const targetValue = parseInt(targetPercentage);
 
   let currentValue = 0;
-  const increment = targetValue / 30; // 30 steps for smooth animation
-  const duration = 1000; // 1 second
+  const increment = targetValue / 30;
+  const duration = 1000;
   const stepTime = duration / 30;
 
   const counter = setInterval(() => {
@@ -341,61 +317,44 @@ function animatePercentageCounter(progressBar, targetPercentage) {
   }, stepTime);
 }
 
-// ==============================================
-// SKILL INTERACTIONS
-// ==============================================
-
 function addSkillHoverEffects(skillItem) {
   const skillIcon = skillItem.querySelector(".skill-icon");
   const skillDescription = skillItem.querySelector(".skill-description");
 
   skillItem.addEventListener("mouseenter", function () {
-    // Add glow effect to icon
     skillIcon.style.transform = "scale(1.1)";
     skillIcon.style.boxShadow = "0 0 20px rgba(99, 102, 241, 0.3)";
 
-    // Show description with animation
     skillDescription.style.opacity = "1";
     skillDescription.style.maxHeight = "100px";
 
-    // Add pulse effect to progress bar
     const progressBar = skillItem.querySelector(".skill-progress-fill");
     progressBar.style.animation = "pulse 1s ease-in-out";
   });
 
   skillItem.addEventListener("mouseleave", function () {
-    // Remove glow effect
     skillIcon.style.transform = "scale(1)";
     skillIcon.style.boxShadow = "none";
 
-    // Hide description
     skillDescription.style.opacity = "0";
     skillDescription.style.maxHeight = "0";
 
-    // Remove pulse effect
     const progressBar = skillItem.querySelector(".skill-progress-fill");
     progressBar.style.animation = "none";
   });
 
-  // Add click effect for mobile
   skillItem.addEventListener("click", function () {
     const isActive = skillItem.classList.contains("active");
 
-    // Remove active class from all items
     document.querySelectorAll(".skill-item").forEach((item) => {
       item.classList.remove("active");
     });
 
-    // Toggle active class on clicked item
     if (!isActive) {
       skillItem.classList.add("active");
     }
   });
 }
-
-// ==============================================
-// SKILL FILTERING (Optional Feature)
-// ==============================================
 
 function initializeSkillFiltering() {
   const filterButtons = document.querySelectorAll(".skill-filter-btn");
@@ -407,11 +366,9 @@ function initializeSkillFiltering() {
     button.addEventListener("click", function () {
       const filter = this.dataset.filter;
 
-      // Update active button
       filterButtons.forEach((btn) => btn.classList.remove("active"));
       this.classList.add("active");
 
-      // Filter categories
       skillCategories.forEach((category) => {
         if (filter === "all" || category.dataset.category === filter) {
           ategory.style.display = "block";

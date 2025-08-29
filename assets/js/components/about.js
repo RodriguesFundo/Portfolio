@@ -1,6 +1,3 @@
-// ==============================================
-// ABOUT.JS - ABOUT COMPONENT
-// ==============================================
 document.addEventListener("DOMContentLoaded", () => {
   initializeAbout();
 });
@@ -18,8 +15,6 @@ function initializeAbout() {
       console.error(e);
     }
   }
-
-  console.log("About component initialized");
 }
 
 function renderAbout(container) {
@@ -52,7 +47,6 @@ function renderAbout(container) {
         </div>
       </div>
 
-      <!-- ⚠️ Aqui depois adicionaremos um botão "Baixar CV" como reforço -->
     </div>
 
     <div class="about-image">
