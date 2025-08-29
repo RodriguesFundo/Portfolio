@@ -674,7 +674,6 @@ body {
   gap: 30px;
 }
 
-/* Continuação do CSS - Projects Section */
 .project-card {
   background: var(--bg-card);
   border-radius: 16px;
@@ -954,78 +953,82 @@ body {
   height: 100%;
 }
 
-/* Fallback de visibilidade que já usaste */
 .project-card.animate-in,
 .project-card.show {
   opacity: 1 !important;
   transform: translateY(0) !important;
   transition: var(--transition-smooth);
 }
-/* ===== Fix responsivo: controls + filtros ===== */
 
-/* Quebra a linha mais cedo e evita “empurrar” os filtros */
+/* Responsividade */
+
 @media (max-width: 900px) {
   .projects-controls {
+    display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
-    align-items: stretch; /* pega largura total */
+    align-items: stretch;
     gap: 12px;
   }
 
   .projects-controls .controls-left {
     display: grid;
-    grid-template-columns: 1fr; /* search numa linha, select na linha seguinte */
+    grid-template-columns: 1fr;
     gap: 10px;
     width: 100%;
-    min-width: 0; /* evita overflow do select */
+    min-width: 0;
     flex: 0 0 auto;
   }
 
   .projects-controls input[type="search"],
   .projects-controls select {
-    width: 100%; /* ocupa toda a linha */
+    width: 100%;
   }
 
   .projects-controls .controls-right {
     display: flex;
     gap: 10px;
-    justify-content: flex-end; /* ou center, se preferir */
+    justify-content: flex-end;
     width: 100%;
   }
 
-  /* dá um respiro pros filtros, evitando “colisão” visual */
   .projects-filters {
     margin-bottom: 20px;
     gap: 10px;
   }
 }
 
-/* Telefones pequenos: tudo em uma coluna confortável */
 @media (max-width: 640px) {
   .projects-controls {
     gap: 10px;
   }
 
   .projects-controls .controls-left {
-    display: grid;
-    grid-template-columns: 1fr auto; /* search ocupa espaço flexível, select se ajusta */
-    gap: 10px;
-    width: 100%;
+    grid-template-columns: 1fr auto;
+    align-items: center;
   }
 
   .projects-controls input[type="search"] {
-    width: 100%; /* search ocupa a coluna flexível */
+    width: 100%;
+    min-width: 0;
   }
 
   .projects-controls select {
-    min-width: 120px; /* garante que o select não fique minúsculo */
     width: auto;
+    min-width: 120px;
+    max-width: 50vw;
   }
 
   .projects-controls .controls-right {
     justify-content: center;
   }
 
+  .projects-controls .controls-right .view-btn {
+    display: none !important;
+  }
+
   .projects-grid {
+    display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
   }
@@ -1103,7 +1106,6 @@ body {
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Classe aplicada pelo IntersectionObserver (JS) */
 .timeline-experience.animate-in {
   opacity: 1;
   transform: translateY(0);
@@ -1227,7 +1229,6 @@ body {
     box-shadow: 0 4px 20px rgba(16, 185, 129, 0.6);
   }
 }
-/* Inverte o badge quando o item está do lado esquerdo */
 .timeline-experience:nth-child(odd) .status-badge {
   right: auto;
   left: 24px;
@@ -1263,7 +1264,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem; /* emoji */
+  font-size: 1.5rem;
   box-shadow: 0 8px 16px rgba(99, 102, 241, 0.3);
   border: 2px solid rgba(255, 255, 255, 0.1);
 }
@@ -1317,14 +1318,13 @@ body {
   transform: rotate(180deg);
 }
 
-/* Conteúdo expandido (combina com teu JS: hidden + .show) */
 .expanded-content {
   max-height: 0;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
 }
-/* quando o JS adiciona .show e remove [hidden] */
+
 .expanded-content.show {
   max-height: 500px;
   opacity: 1;
