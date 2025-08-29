@@ -973,7 +973,7 @@ body {
 
 .experience-timeline {
   position: relative;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -983,9 +983,33 @@ body {
   left: 50%;
   top: 0;
   bottom: 0;
-  width: 2px;
-  background: var(--border-color);
+  width: 4px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    var(--primary-color) 10%,
+    var(--secondary-color) 30%,
+    #06b6d4 50%,
+    var(--secondary-color) 70%,
+    var(--primary-color) 90%,
+    transparent 100%
+  );
   transform: translateX(-50%);
+  border-radius: 2px;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+  animation: pulse-line 3s ease-in-out infinite;
+}
+
+@keyframes pulse-line {
+  0%,
+  100% {
+    opacity: 0.6;
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.6);
+  }
 }
 
 .timeline-item {
@@ -1001,6 +1025,37 @@ body {
   transform: translateY(0);
 }
 
+.timeline-experience {
+  position: relative;
+  margin-bottom: 120px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Classe aplicada pelo IntersectionObserver (JS) */
+.timeline-experience.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+.timeline-item.animate-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: var(--transition-smooth);
+}
+
+.timeline-experience:nth-child(odd) {
+  padding-right: calc(50% + 60px);
+  text-align: right;
+}
+.timeline-experience:nth-child(even) {
+  padding-left: calc(50% + 60px);
+  text-align: left;
+}
+
 .timeline-item:nth-child(odd) {
   padding-right: 50%;
   text-align: right;
@@ -1009,6 +1064,342 @@ body {
 .timeline-item:nth-child(even) {
   padding-left: 50%;
   text-align: left;
+}
+
+/* Card principal */
+.experience-card {
+  background: linear-gradient(
+    145deg,
+    rgba(30, 41, 59, 0.8) 0%,
+    rgba(51, 65, 85, 0.4) 100%
+  );
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 24px;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.experience-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), #06b6d4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.experience-card:hover::before {
+  opacity: 1;
+}
+
+.experience-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow:
+    0 32px 64px -12px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+.card-header {
+  padding: 32px 32px 24px;
+  position: relative;
+}
+
+.experience-period {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--primary-color);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+.experience-period::before {
+  content: "📅";
+  font-size: 1rem;
+}
+
+.status-badge {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); }
+  100% { box-shadow: 0 4px 20px rgba(16, 185, 129, 0.6); }
+}
+/* Inverte o badge quando o item está do lado esquerdo */
+.timeline-experience:nth-child(odd) .status-badge {
+  right: auto;
+  left: 24px;
+}
+
+.job-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.timeline-experience:nth-child(odd) .company-info {
+  justify-content: flex-end;
+}
+
+.company-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem; /* emoji */
+  box-shadow: 0 8px 16px rgba(99, 102, 241, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.company-name {
+  color: var(--secondary-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Conteúdo do card */
+.card-content {
+  padding: 0 32px 32px;
+}
+
+.job-description {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+/* Botão de expansão */
+.expand-toggle {
+  width: 100%;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  color: var(--primary-color);
+  padding: 12px 20px;
+  border-radius: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.expand-toggle:hover {
+  background: rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.4);
+  transform: translateY(-2px);
+}
+.expand-icon {
+  transition: transform 0.3s ease;
+  width: 20px;
+  height: 20px;
+}
+.expand-toggle.expanded .expand-icon {
+  transform: rotate(180deg);
+}
+
+/* Conteúdo expandido (combina com teu JS: hidden + .show) */
+.expanded-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+}
+/* quando o JS adiciona .show e remove [hidden] */
+.expanded-content.show {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 24px;
+}
+
+
+/* Skills */
+.skills-section { margin-bottom: 24px; }
+
+.skills-title {
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-item {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+  color: var(--secondary-color);
+  padding: 8px 14px;
+  border-radius: 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  transition: var(--transition-smooth);
+}
+.skill-item:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+/* Conquistas */
+.achievements-section { margin-top: 24px; }
+
+.achievements-title {
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.achievements-list {
+  list-style: none;
+}
+.achievement-item {
+  color: var(--text-secondary);
+  padding: 8px 0;
+  border-left: 3px solid var(--primary-color);
+  padding-left: 16px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  transition: var(--transition-smooth);
+}
+.achievement-item:hover {
+  color: var(--text-primary);
+  border-left-color: var(--secondary-color);
+}
+
+
+/* Dot central (marcador) */
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 60px;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border: 4px solid var(--bg-primary);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7);
+  animation: dot-pulse 2s infinite;
+}
+
+@keyframes dot-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7); }
+  70% { box-shadow: 0 0 0 12px rgba(99, 102, 241, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); }
+}
+
+/* Seta conectora do card para a linha */
+.timeline-experience:nth-child(odd) .experience-card::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 60px;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-left: 20px solid rgba(30, 41, 59, 0.8);
+  filter: drop-shadow(2px 0 4px rgba(0, 0, 0, 0.1));
+}
+.timeline-experience:nth-child(even) .experience-card::after {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 60px;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-right: 20px solid rgba(30, 41, 59, 0.8);
+  filter: drop-shadow(-2px 0 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .experience-timeline::before {
+    left: 24px;
+    transform: none;
+  }
+
+  .timeline-experience:nth-child(odd),
+  .timeline-experience:nth-child(even) {
+    padding-left: 60px;
+    padding-right: 20px;
+    text-align: left;
+  }
+
+  .timeline-dot {
+    left: 24px;
+    transform: none;
+  }
+
+  .timeline-experience:nth-child(odd) .experience-card::after,
+  .timeline-experience:nth-child(even) .experience-card::after {
+    left: -20px;
+    right: auto;
+    border-left: none;
+    border-right: 20px solid rgba(30, 41, 59, 0.8);
+  }
+
+  .timeline-experience:nth-child(odd) .company-info {
+    justify-content: flex-start;
+  }
+
+  .timeline-experience:nth-child(odd) .status-badge {
+    left: auto;
+    right: 24px;
+  }
+}
+
+/* Print */
+@media print {
+  .experience-timeline::before { display: none; }
+  .timeline-experience { margin-bottom: 32px; }
+  .experience-card { border: 1px solid #ccc; box-shadow: none; transform: none !important; }
 }
 
 .timeline-content {
