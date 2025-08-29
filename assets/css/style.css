@@ -1588,22 +1588,24 @@ body {
 .articles {
   padding: var(--section-padding);
   background: var(--bg-secondary);
+  position: relative;
 }
 
 .articles-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 32px;
 }
 
 .article-card {
   background: var(--bg-card);
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
   border: 1px solid var(--border-color);
   transition: var(--transition-smooth);
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(30px);
+  position: relative;
 }
 
 .article-card.show {
@@ -1611,15 +1613,23 @@ body {
   transform: translateY(0);
 }
 
+.article-card.animate-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: var(--transition-smooth);
+}
+
 .article-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-card);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-card), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .article-image {
-  height: 180px;
+  height: 200px;
   overflow: hidden;
   position: relative;
+  background: linear-gradient(135deg, #374151, #4b5563);
 }
 
 .article-image img {
@@ -1635,62 +1645,145 @@ body {
 
 .article-date {
   position: absolute;
-  top: 15px;
-  left: 15px;
-  background: var(--primary-color);
+  top: 16px;
+  left: 16px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
   color: white;
-  padding: 5px 10px;
-  border-radius: 20px;
+  padding: 6px 12px;
+  border-radius: 12px;
   font-size: 0.8rem;
   font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .article-content {
-  padding: 25px;
+  padding: 28px;
 }
 
 .article-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 10px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
   color: var(--text-primary);
   line-height: 1.4;
+  transition: color 0.3s ease;
 }
 
 .article-excerpt {
   color: var(--text-secondary);
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 .article-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .article-tag {
   background: var(--bg-primary);
   color: var(--text-secondary);
-  padding: 4px 10px;
+  padding: 4px 12px;
   border-radius: 12px;
   font-size: 0.8rem;
+  font-weight: 500;
   border: 1px solid var(--border-color);
+  transition: var(--transition-smooth);
+}
+
+.article-tag:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .article-link {
   color: var(--primary-color);
   text-decoration: none;
-  font-weight: 500;
-  display: flex;
+  font-weight: 600;
+  display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
   transition: var(--transition-smooth);
+  padding: 10px 16px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: rgba(99, 102, 241, 0.08);
 }
 
 .article-link:hover {
-  gap: 10px;
+  gap: 12px;
+  background: rgba(99, 102, 241, 0.15);
+  border-color: rgba(99, 102, 241, 0.3);
+  transform: translateX(2px);
+}
+
+.article-link svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.article-link:hover svg {
+  transform: translateX(3px);
+}
+
+.article-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.article-card:hover::after {
+  opacity: 0.8;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .articles-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .article-content {
+    padding: 24px;
+  }
+
+  .article-image {
+    height: 180px;
+  }
+}
+
+/* Animações de entrada */
+.article-card:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.article-card:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.article-card:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.article-card:nth-child(4) {
+  transition-delay: 0.4s;
 }
 
 /* Contact Section */
