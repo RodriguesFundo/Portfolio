@@ -355,6 +355,8 @@ body {
 
 .hero-buttons {
   display: flex;
+  align-items: flex-start;
+  max-width: 640px;
   flex-direction: column;
   gap: 20px;
 }
@@ -2095,6 +2097,23 @@ body {
 
   .hero-buttons {
     justify-content: center;
+    align-items: stretch;
+    max-width: 100%;
+  }
+  .hero-buttons-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .hero-buttons-row a.btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 14px 22px;
+  }
+  .btn-download {
+    width: 100%;
+    max-width: none;
+    font-size: 1.05rem;
+    padding: 16px 22px;
   }
 
   .about-stats {
