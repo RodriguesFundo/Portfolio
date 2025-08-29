@@ -355,8 +355,38 @@ body {
 
 .hero-buttons {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-buttons-row {
+  display: flex;
   gap: 20px;
   flex-wrap: wrap;
+}
+
+.btn-download {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color),
+    var(--accent-color)
+  );
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 14px 28px;
+  border-radius: 10px;
+  box-shadow: var(--shadow-primary);
+  transition: var(--transition-bounce);
+}
+
+.btn-download:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(16, 185, 129, 0.4);
 }
 
 .hero-image {

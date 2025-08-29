@@ -39,15 +39,27 @@ function renderHero(container) {
         experiências digitais inovadoras e funcionais.
       </p>
       <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary">
-          <i class="fas fa-code"></i>
-          Ver Projetos
+        <div class="hero-buttons-row">
+            <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-code"></i>
+            Ver Projetos
+            </a>
+            <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-envelope"></i>
+            Entrar em Contato
+            </a>
+        </div>
+
+        <a
+            href="assets/cv/Rodrigues_Fundo_CV.pdf"
+            class="btn btn-download"
+            download="Rodrigues_Fundo_CV.pdf"
+            type="application/pdf"
+            rel="noopener"
+        >
+            <i class="fas fa-file-download"></i>
+            Baixar CV
         </a>
-        <a href="#contact" class="btn btn-outline">
-          <i class="fas fa-envelope"></i>
-          Entrar em Contato
-        </a>
-        <!-- ⚠️ Aqui depois colocaremos o botão "Baixar CV" -->
       </div>
     </div>
 
