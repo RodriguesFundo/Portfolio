@@ -10,7 +10,7 @@ const navLinks = document.querySelectorAll(".nav-link");
 const backToTopBtn = document.getElementById("back-to-top");
 const loadingScreen = document.getElementById("loading-screen");
 const typedText = document.getElementById("typed-text");
-const contactForm = document.getElementById("contact-form");
+// const contactForm = document.getElementById("contact-form");
 
 // ==============================================
 // INITIALIZATION
@@ -373,12 +373,13 @@ function initParallaxEffects() {
 // ==============================================
 
 function initContactForm() {
-  if (!contactForm) return;
+  const form = document.getElementById("contact-form");
+  if (!form) return;
 
-  contactForm.addEventListener("submit", handleContactSubmit);
+  form.addEventListener("submit", handleContactSubmit);
 
   // Add input animations
-  const formInputs = contactForm.querySelectorAll("input, textarea");
+  const formInputs = form.querySelectorAll("input, textarea");
   formInputs.forEach((input) => {
     input.addEventListener("focus", function () {
       this.parentElement.classList.add("focused");
@@ -395,8 +396,9 @@ function initContactForm() {
 async function handleContactSubmit(e) {
   e.preventDefault();
 
-  const formData = new FormData(contactForm);
-  const submitBtn = contactForm.querySelector('button[type="submit"]');
+  const form = e.currentTarget;
+  const formData = new FormData(form);
+  const submitBtn = form.querySelector('button[type="submit"]');
   const originalText = submitBtn.innerHTML;
 
   // Show loading state
@@ -404,31 +406,20 @@ async function handleContactSubmit(e) {
   submitBtn.disabled = true;
 
   try {
-    // Simulate form submission (replace with your actual endpoint)
     await simulateFormSubmission(formData);
 
-    // Success state
     submitBtn.innerHTML = '<i class="fas fa-check"></i> Mensagem Enviada!';
     submitBtn.style.background = "var(--accent-color)";
-
-    // Reset form
-    contactForm.reset();
-
-    // Show success message
+    form.reset();
     showNotification("Mensagem enviada com sucesso!", "success");
   } catch (error) {
     console.error("Form submission error:", error);
-
-    // Error state
     submitBtn.innerHTML =
       '<i class="fas fa-exclamation-triangle"></i> Erro ao Enviar';
     submitBtn.style.background = "var(--secondary-color)";
-
-    // Show error message
     showNotification("Erro ao enviar mensagem. Tente novamente.", "error");
   }
 
-  // Reset button after 3 seconds
   setTimeout(() => {
     submitBtn.innerHTML = originalText;
     submitBtn.disabled = false;
