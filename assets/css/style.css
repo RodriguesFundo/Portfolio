@@ -1,7 +1,3 @@
-/* ==============================================
-   MODERN PORTFOLIO - MAIN CSS
-   ============================================== */
-
 /* Root Variables */
 :root {
   /* Colors */
@@ -965,6 +961,80 @@ body {
   transform: translateY(0) !important;
   transition: var(--transition-smooth);
 }
+/* ===== Fix responsivo: controls + filtros ===== */
+
+/* Quebra a linha mais cedo e evita “empurrar” os filtros */
+@media (max-width: 900px) {
+  .projects-controls {
+    flex-direction: column;
+    align-items: stretch; /* pega largura total */
+    gap: 12px;
+  }
+
+  .projects-controls .controls-left {
+    display: grid;
+    grid-template-columns: 1fr; /* search numa linha, select na linha seguinte */
+    gap: 10px;
+    width: 100%;
+    min-width: 0; /* evita overflow do select */
+    flex: 0 0 auto;
+  }
+
+  .projects-controls input[type="search"],
+  .projects-controls select {
+    width: 100%; /* ocupa toda a linha */
+  }
+
+  .projects-controls .controls-right {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end; /* ou center, se preferir */
+    width: 100%;
+  }
+
+  /* dá um respiro pros filtros, evitando “colisão” visual */
+  .projects-filters {
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+}
+
+/* Telefones pequenos: tudo em uma coluna confortável */
+@media (max-width: 640px) {
+  .projects-controls {
+    gap: 10px;
+  }
+
+  .projects-controls .controls-left {
+    display: grid;
+    grid-template-columns: 1fr auto; /* search ocupa espaço flexível, select se ajusta */
+    gap: 10px;
+    width: 100%;
+  }
+
+  .projects-controls input[type="search"] {
+    width: 100%; /* search ocupa a coluna flexível */
+  }
+
+  .projects-controls select {
+    min-width: 120px; /* garante que o select não fique minúsculo */
+    width: auto;
+  }
+
+  .projects-controls .controls-right {
+    justify-content: center;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .projects-grid--list .project-image {
+    width: 100%;
+    min-height: 180px;
+  }
+}
 
 /* Experience Section */
 .experience {
@@ -1039,8 +1109,6 @@ body {
   transform: translateY(0);
 }
 
-
-
 .timeline-item.animate-in {
   opacity: 1 !important;
   transform: translateY(0) !important;
@@ -1090,7 +1158,12 @@ body {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), #06b6d4);
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color),
+    #06b6d4
+  );
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -1101,8 +1174,7 @@ body {
 
 .experience-card:hover {
   transform: translateY(-12px) scale(1.02);
-  box-shadow:
-    0 32px 64px -12px rgba(0, 0, 0, 0.4),
+  box-shadow: 0 32px 64px -12px rgba(0, 0, 0, 0.4),
     0 0 40px rgba(99, 102, 241, 0.2);
   border-color: rgba(99, 102, 241, 0.4);
 }
@@ -1148,8 +1220,12 @@ body {
 }
 
 @keyframes glow {
-  0% { box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); }
-  100% { box-shadow: 0 4px 20px rgba(16, 185, 129, 0.6); }
+  0% {
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  }
+  100% {
+    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.6);
+  }
 }
 /* Inverte o badge quando o item está do lado esquerdo */
 .timeline-experience:nth-child(odd) .status-badge {
@@ -1179,7 +1255,11 @@ body {
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1251,9 +1331,10 @@ body {
   margin-top: 24px;
 }
 
-
 /* Skills */
-.skills-section { margin-bottom: 24px; }
+.skills-section {
+  margin-bottom: 24px;
+}
 
 .skills-title {
   color: var(--text-primary);
@@ -1269,7 +1350,11 @@ body {
 }
 
 .skill-item {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.1),
+    rgba(139, 92, 246, 0.1)
+  );
   color: var(--secondary-color);
   padding: 8px 14px;
   border-radius: 14px;
@@ -1280,12 +1365,18 @@ body {
 }
 .skill-item:hover {
   transform: scale(1.1);
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.2),
+    rgba(139, 92, 246, 0.2)
+  );
   box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
 }
 
 /* Conquistas */
-.achievements-section { margin-top: 24px; }
+.achievements-section {
+  margin-top: 24px;
+}
 
 .achievements-title {
   color: var(--text-primary);
@@ -1311,7 +1402,6 @@ body {
   border-left-color: var(--secondary-color);
 }
 
-
 /* Dot central (marcador) */
 .timeline-dot {
   position: absolute;
@@ -1319,7 +1409,11 @@ body {
   top: 60px;
   width: 24px;
   height: 24px;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   border: 4px solid var(--bg-primary);
   border-radius: 50%;
   transform: translateX(-50%);
@@ -1329,9 +1423,15 @@ body {
 }
 
 @keyframes dot-pulse {
-  0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7); }
-  70% { box-shadow: 0 0 0 12px rgba(99, 102, 241, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(99, 102, 241, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+  }
 }
 
 /* Seta conectora do card para a linha */
@@ -1397,9 +1497,17 @@ body {
 
 /* Print */
 @media print {
-  .experience-timeline::before { display: none; }
-  .timeline-experience { margin-bottom: 32px; }
-  .experience-card { border: 1px solid #ccc; box-shadow: none; transform: none !important; }
+  .experience-timeline::before {
+    display: none;
+  }
+  .timeline-experience {
+    margin-bottom: 32px;
+  }
+  .experience-card {
+    border: 1px solid #ccc;
+    box-shadow: none;
+    transform: none !important;
+  }
 }
 
 .timeline-content {
