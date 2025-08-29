@@ -11,18 +11,14 @@ function initializeContact() {
 
   renderContact(container);
 
-  // Deixa tudo visível caso uses IntersectionObserver
   const r = container.getBoundingClientRect();
   if (r.top < window.innerHeight && r.bottom > 0) {
     container.classList.add("animate-in", "show");
   }
 
-  // Não tratamos envio aqui: o main.js já chama initContactForm()
-  // e usa #contact-form para bindar o submit/estados/notifications.
-  console.log("Contact component initialized");
+
 }
 
-// --- DATA (podes editar livremente) ---
 const contactData = {
   location: "Matola, Maputo, Moçambique",
   phoneDisplay: "+258 84 26 88 078",
@@ -59,8 +55,7 @@ function renderContact(container) {
     )
     .join("");
 
-  // ⚠️ Sem <div class="contact-content"> aqui dentro.
-  // O container já tem class="contact-content" no HTML.
+
   container.innerHTML = `
     <div class="contact-info">
       <h3>Entre em Contato</h3>

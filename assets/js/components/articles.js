@@ -1,6 +1,3 @@
-// ==============================================
-// ARTICLES.JS - ARTICLES COMPONENT
-// ==============================================
 document.addEventListener("DOMContentLoaded", function () {
   initializeArticles();
 });
@@ -8,9 +5,7 @@ function initializeArticles() {
   const container = document.getElementById("articles-container");
   if (!container) return;
   renderArticles(container);
-  console.log("Articles component initialized");
 }
-// Dados de exemplo
 const articlesData = [
   {
     title: "Boas Práticas em React Native",

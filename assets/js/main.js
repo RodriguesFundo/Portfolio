@@ -1,8 +1,3 @@
-// ==============================================
-// MAIN.JS - PORTFOLIO FUNCTIONALITY
-// ==============================================
-
-// DOM Elements
 const navbar = document.getElementById("navbar");
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".nav-menu");
@@ -10,18 +5,12 @@ const navLinks = document.querySelectorAll(".nav-link");
 const backToTopBtn = document.getElementById("back-to-top");
 const loadingScreen = document.getElementById("loading-screen");
 const typedText = document.getElementById("typed-text");
-// const contactForm = document.getElementById("contact-form");
-
-// ==============================================
-// INITIALIZATION
-// ==============================================
 
 document.addEventListener("DOMContentLoaded", function () {
   initializePortfolio();
 });
 
 function initializePortfolio() {
-  // Initialize all components
   initNavigation();
   initScrollEffects();
   initTypingAnimation();
@@ -30,18 +19,11 @@ function initializePortfolio() {
   initParallaxEffects();
   initPreloader();
 
-  // Add smooth scrolling for all anchor links
   addSmoothScrolling();
 
-  // Initialize intersection observer for animations
   initIntersectionObserver();
 
-  console.log("Portfolio initialized successfully!");
 }
-
-// ==============================================
-// PRELOADER
-// ==============================================
 
 function initPreloader() {
   if (loadingScreen) {
@@ -50,7 +32,6 @@ function initPreloader() {
         loadingScreen.style.opacity = "0";
         loadingScreen.style.visibility = "hidden";
 
-        // Remove from DOM after animation
         setTimeout(() => {
           loadingScreen.remove();
         }, 500);
@@ -59,29 +40,21 @@ function initPreloader() {
   }
 }
 
-// ==============================================
-// NAVIGATION
-// ==============================================
-
 function initNavigation() {
-  // Mobile menu toggle
   if (navToggle && navMenu) {
     navToggle.addEventListener("click", toggleMobileMenu);
   }
 
-  // Close mobile menu when clicking on links
   navLinks.forEach((link) => {
     link.addEventListener("click", closeMobileMenu);
   });
 
-  // Close mobile menu when clicking outside
   document.addEventListener("click", function (e) {
     if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
       closeMobileMenu();
     }
   });
 
-  // Active link highlighting
   updateActiveNavLink();
   window.addEventListener("scroll", updateActiveNavLink);
 }
@@ -117,19 +90,14 @@ function updateActiveNavLink() {
   });
 }
 
-// ==============================================
-// SCROLL EFFECTS
-// ==============================================
-
 function initScrollEffects() {
   window.addEventListener("scroll", handleScroll);
-  handleScroll(); // Run once on load
+  handleScroll();
 }
 
 function handleScroll() {
   const scrollY = window.scrollY;
 
-  // Navbar background on scroll
   if (navbar) {
     if (scrollY > 50) {
       navbar.classList.add("scrolled");
@@ -138,7 +106,6 @@ function handleScroll() {
     }
   }
 
-  // Back to top button
   if (backToTopBtn) {
     if (scrollY > 300) {
       backToTopBtn.classList.add("show");
@@ -147,7 +114,6 @@ function handleScroll() {
     }
   }
 
-  // Parallax effect for hero section
   const heroSection = document.querySelector(".hero");
   if (heroSection) {
     const parallaxSpeed = 0.5;
@@ -155,7 +121,6 @@ function handleScroll() {
   }
 }
 
-// Back to top functionality
 if (backToTopBtn) {
   backToTopBtn.addEventListener("click", function () {
     window.scrollTo({
@@ -164,10 +129,6 @@ if (backToTopBtn) {
     });
   });
 }
-
-// ==============================================
-// TYPING ANIMATION
-// ==============================================
 
 function initTypingAnimation() {
   if (!typedText) return;
@@ -198,7 +159,6 @@ function initTypingAnimation() {
     }
 
     if (!isDeleting && charIndex === currentText.length) {
-      // Pause before deleting
       setTimeout(() => {
         isDeleting = true;
       }, 2000);
@@ -210,13 +170,8 @@ function initTypingAnimation() {
     setTimeout(typeText, typingSpeed);
   }
 
-  // Start typing animation
   setTimeout(typeText, 1000);
 }
-
-// ==============================================
-// SMOOTH SCROLLING
-// ==============================================
 
 function addSmoothScrolling() {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -234,19 +189,13 @@ function addSmoothScrolling() {
           behavior: "smooth",
         });
 
-        // Close mobile menu if open
         closeMobileMenu();
       }
     });
   });
 }
 
-// ==============================================
-// SCROLL ANIMATIONS
-// ==============================================
-
 function initScrollAnimations() {
-  // Animate elements on scroll
   const animateElements = document.querySelectorAll(
     ".project-card, .timeline-item, .article-card, .skill-category"
   );
@@ -268,10 +217,8 @@ function initIntersectionObserver() {
       if (entry.isIntersecting) {
         const element = entry.target;
 
-        // Add animation class
         element.classList.add("animate-in");
 
-        // Add show class for specific elements
         if (
           element.classList.contains("project-card") ||
           element.classList.contains("timeline-item") ||
@@ -280,12 +227,10 @@ function initIntersectionObserver() {
           element.classList.add("show");
         }
 
-        // Animate skill progress bars
         if (element.classList.contains("skill-category")) {
           animateSkillBars(element);
         }
 
-        // Animate counters
         if (element.classList.contains("stat-item")) {
           animateCounter(element);
         }
@@ -295,7 +240,6 @@ function initIntersectionObserver() {
     });
   }, observerOptions);
 
-  // Observe all animatable elements
   const elementsToObserve = document.querySelectorAll(`
         .project-card, .timeline-item, .article-card, .skill-category,
         .stat-item, .about-text, .contact-info, .hero-content
@@ -305,10 +249,6 @@ function initIntersectionObserver() {
     observer.observe(element);
   });
 }
-
-// ==============================================
-// SKILL BARS ANIMATION
-// ==============================================
 
 function animateSkillBars(skillCategory) {
   const progressBars = skillCategory.querySelectorAll(".skill-progress-fill");
@@ -320,10 +260,6 @@ function animateSkillBars(skillCategory) {
     }, index * 200);
   });
 }
-
-// ==============================================
-// COUNTER ANIMATION
-// ==============================================
 
 function animateCounter(statItem) {
   const numberElement = statItem.querySelector(".stat-number");
@@ -351,10 +287,6 @@ function animateCounter(statItem) {
   }, stepTime);
 }
 
-// ==============================================
-// PARALLAX EFFECTS
-// ==============================================
-
 function initParallaxEffects() {
   window.addEventListener("scroll", function () {
     const scrolled = window.pageYOffset;
@@ -368,17 +300,12 @@ function initParallaxEffects() {
   });
 }
 
-// ==============================================
-// CONTACT FORM
-// ==============================================
-
 function initContactForm() {
   const form = document.getElementById("contact-form");
   if (!form) return;
 
   form.addEventListener("submit", handleContactSubmit);
 
-  // Add input animations
   const formInputs = form.querySelectorAll("input, textarea");
   formInputs.forEach((input) => {
     input.addEventListener("focus", function () {
@@ -401,7 +328,6 @@ async function handleContactSubmit(e) {
   const submitBtn = form.querySelector('button[type="submit"]');
   const originalText = submitBtn.innerHTML;
 
-  // Show loading state
   submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
   submitBtn.disabled = true;
 
@@ -427,12 +353,9 @@ async function handleContactSubmit(e) {
   }, 3000);
 }
 
-// Simulate form submission (replace with actual implementation)
 function simulateFormSubmission(formData) {
   return new Promise((resolve, reject) => {
-    // Simulate API call
     setTimeout(() => {
-      // Randomly succeed or fail for demo
       if (Math.random() > 0.2) {
         resolve("Success");
       } else {
@@ -442,16 +365,10 @@ function simulateFormSubmission(formData) {
   });
 }
 
-// ==============================================
-// NOTIFICATIONS
-// ==============================================
-
 function showNotification(message, type = "info") {
-  // Remove existing notifications
   const existingNotifications = document.querySelectorAll(".notification");
   existingNotifications.forEach((notification) => notification.remove());
 
-  // Create notification element
   const notification = document.createElement("div");
   notification.className = `notification notification-${type}`;
   notification.innerHTML = `
@@ -464,7 +381,6 @@ function showNotification(message, type = "info") {
         </button>
     `;
 
-  // Add styles
   notification.style.cssText = `
         position: fixed;
         top: 20px;
@@ -485,22 +401,18 @@ function showNotification(message, type = "info") {
         transition: var(--transition-smooth);
     `;
 
-  // Add to DOM
   document.body.appendChild(notification);
 
-  // Animate in
   setTimeout(() => {
     notification.style.transform = "translateX(0)";
   }, 100);
 
-  // Close functionality
   const closeBtn = notification.querySelector(".notification-close");
   closeBtn.addEventListener("click", () => {
     notification.style.transform = "translateX(100%)";
     setTimeout(() => notification.remove(), 300);
   });
 
-  // Auto close after 5 seconds
   setTimeout(() => {
     if (notification.parentElement) {
       notification.style.transform = "translateX(100%)";
@@ -509,11 +421,6 @@ function showNotification(message, type = "info") {
   }, 5000);
 }
 
-// ==============================================
-// UTILITIES
-// ==============================================
-
-// Debounce function for performance
 function debounce(func, wait) {
   let timeout;
   return function executedFunction(...args) {
@@ -526,7 +433,6 @@ function debounce(func, wait) {
   };
 }
 
-// Throttle function for scroll events
 function throttle(func, limit) {
   let inThrottle;
   return function () {
@@ -540,60 +446,34 @@ function throttle(func, limit) {
   };
 }
 
-// Enhanced scroll handler with throttling
 const throttledScrollHandler = throttle(handleScroll, 16);
 window.addEventListener("scroll", throttledScrollHandler);
 
-// ==============================================
-// KEYBOARD NAVIGATION
-// ==============================================
-
 document.addEventListener("keydown", function (e) {
-  // ESC key closes mobile menu
   if (e.key === "Escape") {
     closeMobileMenu();
   }
 
-  // Enter key on navigation links
   if (e.key === "Enter" && e.target.classList.contains("nav-link")) {
     e.target.click();
   }
 });
 
-// ==============================================
-// PERFORMANCE MONITORING
-// ==============================================
-
-// Monitor page load performance
 window.addEventListener("load", function () {
   const loadTime = performance.now();
-  console.log(`Page loaded in ${Math.round(loadTime)}ms`);
 
-  // Track Core Web Vitals if available
   if ("web-vital" in window) {
-    // Implementation for Core Web Vitals tracking
     console.log("Core Web Vitals tracking initialized");
   }
 });
 
-// ==============================================
-// ERROR HANDLING
-// ==============================================
-
 window.addEventListener("error", function (e) {
   console.error("JavaScript error:", e.error);
-  // You can add error reporting here
 });
 
-// Handle unhandled promise rejections
 window.addEventListener("unhandledrejection", function (e) {
   console.error("Unhandled promise rejection:", e.reason);
-  // You can add error reporting here
 });
-
-// ==============================================
-// EXPORT FOR MODULES (if using modules)
-// ==============================================
 
 if (typeof module !== "undefined" && module.exports) {
   module.exports = {

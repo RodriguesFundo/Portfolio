@@ -74,47 +74,14 @@
       <div class="hero-background">
         <div class="hero-particles"></div>
       </div>
+
       <div class="container">
-        <div class="hero-content">
-          <div class="hero-text">
-            <h1 class="hero-title">
-              Olá, eu sou
-              <span class="hero-name" data-text="Rodrigues Fundo"
-                >Rodrigues Fundo</span
-              >
-            </h1>
-            <p class="hero-subtitle">
-              <span id="typed-text"></span>
-              <span class="cursor">|</span>
-            </p>
-            <p class="hero-description">
-              Desenvolvedor Mobile especializado em React Native, criando
-              experiências digitais inovadoras e funcionais.
-            </p>
-            <div class="hero-buttons">
-              <a href="#projects" class="btn btn-primary">
-                <i class="fas fa-code"></i>
-                Ver Projetos
-              </a>
-              <a href="#contact" class="btn btn-outline">
-                <i class="fas fa-envelope"></i>
-                Entrar em Contato
-              </a>
-            </div>
-          </div>
-          <div class="hero-image">
-            <div class="hero-avatar">
-              <img src="assets/img/I.JPG" alt="Rodrigues Fundo" />
-              <div class="avatar-ring"></div>
-            </div>
-          </div>
-        </div>
+        <div class="hero-content" id="hero-container"></div>
       </div>
+
       <div class="hero-scroll">
         <a href="#about">
-          <div class="scroll-indicator">
-            <span></span>
-          </div>
+          <div class="scroll-indicator"><span></span></div>
         </a>
       </div>
     </section>
@@ -126,46 +93,8 @@
           <span class="section-label">01</span>
           <h2 class="section-title">Sobre Mim</h2>
         </div>
-        <div class="about-content">
-          <div class="about-text">
-            <h3>Desenvolvedor Mobile & Full Stack</h3>
-            <p>
-              Sou um jovem desenvolvedor apaixonado por tecnologia e inovação.
-              Com experiência sólida em desenvolvimento mobile usando React
-              Native, também trabalho com tecnologias web e desktop.
-            </p>
-            <p>
-              Atualmente, contribuo para a digitalização de processos
-              hospitalares no Ministério da Saúde, desenvolvendo soluções que
-              impactam positivamente a vida das pessoas.
-            </p>
-            <div class="about-stats">
-              <div class="stat-item">
-                <span class="stat-number">2+</span>
-                <span class="stat-label">Anos de Experiência</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">15+</span>
-                <span class="stat-label">Projetos Concluídos</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">100%</span>
-                <span class="stat-label">Dedicação</span>
-              </div>
-            </div>
-          </div>
-          <div class="about-image">
-            <div class="image-wrapper">
-              <img src="assets/img/I.JPG" alt="Rodrigues Fundo coding" />
-              <div class="tech-badges">
-                <span class="tech-badge">React Native</span>
-                <span class="tech-badge">JavaScript</span>
-                <span class="tech-badge">C#</span>
-                <span class="tech-badge">PHP</span>
-              </div>
-            </div>
-          </div>
-        </div>
+
+        <div class="about-content" id="about-container"></div>
       </div>
     </section>
 
@@ -302,6 +231,8 @@
     </button>
 
     <!-- JavaScript -->
+    <script src="assets/js/components/hero.js"></script>
+    <script src="assets/js/components/about.js"></script>
     <script src="assets/js/components/skills.js"></script>
     <script src="assets/js/components/projects.js"></script>
     <script src="assets/js/components/experience.js"></script>
