@@ -8,25 +8,41 @@ function initializeProjects() {
 
   const projectsData = [
     {
-      title: "App Saúde Digital",
-      description: "Aplicativo para digitalização de processos hospitalares.",
-      tech: ["React Native", "Firebase"],
-      type: "mobile",
-      image: "assets/img/Project/saude.jpg",
+      title: "Sistema de Informação Hospitalar (SIS-H)",
+      description:
+        "Sistema para digitalização de processos hospitalares no âmbito do SIS-H. O projeto foi implementado no Hospital Geral de Mavalane, marcando a criação do primeiro hospital digital de Moçambique.",
+      tech: ["React", "Node.js", "PostgreSQL", "Docker", "REST APIs"],
+      type: "web",
+      image:
+        "https://saudedigital.misau.gov.mz/wp-content/uploads/2024/10/SIS_H.jpeg",
       live: "#",
       repo: "#",
-      date: "2025-08-01",
+      date: "2024-12-01",
       featured: true,
     },
     {
-      title: "Painel Administrativo",
-      description: "Sistema web para gestão hospitalar.",
-      tech: ["React.js", "Node.js", "MongoDB"],
+      title: "Sistema de Gestão Centralizada de Unidades Sanitárias",
+      description:
+        "Plataforma centralizada para padronização e gestão da lista mestre de unidades sanitárias.",
+      tech: ["React", "Node.js", "MongoDB", "Express"],
       type: "web",
-      image: "assets/img/projects/admin.jpg",
+      image: "assets/img/Projectos/mfl.png",
       live: "#",
       repo: "#",
-      date: "2025-06-20",
+      date: "2025-10-15",
+      featured: true,
+    },
+    {
+      title: "App MãeBiz - Módulo Empresas",
+      description:
+        "Desenvolvimento do módulo de empresas para a aplicação MãeBiz, plataforma mobile de apoio a empreendedoras.",
+      tech: ["React Native", "TypeScript", "Firebase"],
+      type: "mobile",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaBjI_yW4Flw99Y9fLYRun3SItrnSprKp8ww&s",
+      live: "#",
+      repo: "#",
+      date: "2024-03-20",
       featured: false,
     },
   ];
@@ -55,7 +71,6 @@ function initializeProjects() {
       console.error(e);
     }
   }
-
 }
 
 function normalize(p) {
@@ -101,7 +116,6 @@ function renderProjects(container, list) {
     `;
     container.appendChild(card);
 
-    // se já estiver visível no viewport, mostra logo
     const r = card.getBoundingClientRect();
     if (r.top < window.innerHeight && r.bottom > 0) {
       card.classList.add("animate-in", "show");
@@ -150,21 +164,20 @@ function setupViewToggle(state, container) {
       b.classList.add("active");
       state.view = b.dataset.view === "list" ? "list" : "grid";
       container.classList.toggle("projects-grid--list", state.view === "list");
-      // sem re-render, só muda o layout
     });
   });
 }
 
 function applyAndRender(state, container) {
   let list = state.all.filter(
-    (p) => state.filter === "all" || p.type === state.filter
+    (p) => state.filter === "all" || p.type === state.filter,
   );
   if (state.query) {
     list = list.filter(
       (p) =>
         p.title.toLowerCase().includes(state.query) ||
         p.description.toLowerCase().includes(state.query) ||
-        p.tech.join(" ").toLowerCase().includes(state.query)
+        p.tech.join(" ").toLowerCase().includes(state.query),
     );
   }
   switch (state.sort) {
@@ -180,7 +193,7 @@ function applyAndRender(state, container) {
     case "featured":
     default:
       list.sort(
-        (a, b) => Number(b.featured) - Number(a.featured) || b.date - a.date
+        (a, b) => Number(b.featured) - Number(a.featured) || b.date - a.date,
       );
   }
   state.current = list;
@@ -199,8 +212,12 @@ function escapeHTML(s) {
   return String(s).replace(
     /[&<>"']/g,
     (c) =>
-      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" }[
-        c
-      ])
+      ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;",
+      })[c],
   );
 }

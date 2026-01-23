@@ -1,29 +1,54 @@
 document.addEventListener("DOMContentLoaded", function () {
   initializeArticles();
 });
+
 function initializeArticles() {
   const container = document.getElementById("articles-container");
   if (!container) return;
   renderArticles(container);
 }
+
 const articlesData = [
   {
-    title: "Boas Práticas em React Native",
-    excerpt: "Dicas e padrões para criar aplicações móveis mais eficientes.",
-    tags: ["React Native", "Mobile"],
-    date: "Jun 2024",
-    image: "assets/img/articles/react-native.jpg",
-    link: "#",
+    title: "Hackathon USTM - 1º Lugar",
+    excerpt:
+      "Conquista do primeiro lugar na 1ª edição do Hackathon da Universidade São Tomás de Moçambique, desenvolvendo solução inovadora em equipe.",
+    tags: ["Hackathon", "Competição", "Inovação"],
+    date: "2023",
+    image: "assets/img/Artigos/hackathon_ustm.png",
+    link: "https://fcti.ustm.ac.mz/2023/11/13/xvi-jornada-cientifica/",
   },
   {
-    title: "Introdução ao Firebase para Apps",
-    excerpt: "Como usar Firebase como backend completo para apps móveis.",
-    tags: ["Firebase", "Backend"],
-    date: "Mai 2024",
-    image: "assets/img/articles/firebase.jpg",
+    title: "Artigos Técnicos no Medium",
+    excerpt:
+      "Escrita de artigos técnicos sobre desenvolvimento de software, compartilhando conhecimentos e experiências com a comunidade de desenvolvedores.",
+    tags: ["Medium", "Escrita Técnica", "Comunidade"],
+    date: "2023 - 2024",
+    image:
+      "https://miro.medium.com/v2/resize:fit:720/format:webp/1*RB1rxSK_TBmcC5D2PN30JA.png",
+    link: "https://medium.com/@rodriguesfundo",
+  },
+  {
+    title: "Colaboração na Equipe Room",
+    excerpt:
+      "Participação ativa em equipe independente de desenvolvimento, contribuindo para projetos colaborativos e aprendizado conjunto.",
+    tags: ["Colaboração", "Equipe", "Projetos"],
+    date: "2023 - 2024",
+    image:
+      "https://github.com/room-organization/.github/assets/98264322/fca9c16f-bda0-437b-884d-4ba3ee4777d2",
+    link: "https://github.com/room-organization",
+  },
+  {
+    title: "Estratégia RED-REC (MISAU/UNICEF/OMS)",
+    excerpt:
+      "Envolvimento em atividades da estratégia RED-REC (Reaching Every District/Reaching Every Community), apoiada pela UNICEF, com foco na imunização de rotina e mobilização comunitária.",
+    tags: ["RED-REC", "ODK", "Saúde Pública", "UNICEF"],
+    date: "2024",
+    image: "assets/img/Artigos/RED_REC.jpeg",
     link: "#",
   },
 ];
+
 function renderArticles(container) {
   container.innerHTML = "";
   articlesData.forEach((article, index) => {
@@ -31,22 +56,46 @@ function renderArticles(container) {
     card.className = "article-card";
     card.innerHTML = `
       <div class="article-image">
-        <img src="${article.image}" alt="${article.title}" />
-        <div class="article-date">${article.date}</div>
+        <img src="${escapeHTML(article.image)}" alt="${escapeHTML(article.title)}" />
+        <div class="article-date">${escapeHTML(article.date)}</div>
       </div>
       <div class="article-content">
-        <h3 class="article-title">${article.title}</h3>
-        <p class="article-excerpt">${article.excerpt}</p>
+        <h3 class="article-title">${escapeHTML(article.title)}</h3>
+        <p class="article-excerpt">${escapeHTML(article.excerpt)}</p>
         <div class="article-tags">
           ${article.tags
-            .map((tag) => `<span class="article-tag">${tag}</span>`)
+            .map((tag) => `<span class="article-tag">${escapeHTML(tag)}</span>`)
             .join("")}
         </div>
-        <a class="article-link" href="${article.link}" target="_blank">
-          Ler mais <i class="fas fa-arrow-right"></i>
+        ${
+          article.link !== "#"
+            ? `
+        <a class="article-link" href="${escapeHTML(article.link)}" target="_blank" rel="noopener">
+          Ver mais <i class="fas fa-arrow-right"></i>
         </a>
+        `
+            : `
+        <div class="article-link-disabled" style="opacity: 0.5; cursor: default;">
+          Mais informações em breve
+        </div>
+        `
+        }
       </div>
     `;
     container.appendChild(card);
   });
+}
+
+function escapeHTML(s) {
+  return String(s).replace(
+    /[&<>"']/g,
+    (c) =>
+      ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;",
+      })[c],
+  );
 }

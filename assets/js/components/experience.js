@@ -19,41 +19,78 @@ function initializeExperience() {
 
 const experienceData = [
   {
-    period: "2023 - Atual",
-    title: "Desenvolvedor Mobile",
-    company: "Ministério da Saúde - Moçambique",
+    period: "Abril 2024 - Atual",
+    title: "Desenvolvedor de Software (Full Stack)",
+    company: "Ministério da Saúde (MISAU)",
     logo: "🏥",
     description:
-      "Desenvolvimento de aplicativos móveis críticos para o sistema de saúde nacional, focando em soluções que impactam diretamente o atendimento médico e gestão hospitalar.",
+      "Desenvolvimento do Sistema de Informação Hospitalar implementado nas unidades sanitárias da província de Maputo, com participação no lançamento do primeiro hospital digital de Moçambique.",
     skills: [
+      "React",
       "React Native",
-      "Firebase",
-      "TypeScript",
       "Node.js",
-      "MongoDB",
+      "PHP",
+      "Laravel",
+      "MySQL",
+      "PostgreSQL",
+      "Docker",
       "REST APIs",
+      "Git",
     ],
     achievements: [
-      "Desenvolveu sistema de prontuário eletrônico usado em 50+ unidades de saúde",
-      "Implementou notificações em tempo real que reduziram tempo de resposta em 40%",
-      "Liderou equipe de 3 desenvolvedores em projetos críticos",
-      "Otimizou performance da aplicação resultando em 60% menos crashes",
+      "Participou no lançamento do primeiro hospital digital de Moçambique, no Hospital Geral de Mavalane (Unidade Sanitária Pivô)",
+      "Treinou equipes médicas no uso do sistema de informação hospitalar",
+      "Realizou implantação, manutenção e suporte contínuo no Hospital Geral da Machava (Centro de Excelência em Tuberculose)",
+      "Liderou tecnicamente o desenvolvimento do Sistema de Gestão Centralizada de Unidades Sanitárias",
+      "Implementou soluções em 50+ unidades sanitárias da província de Maputo",
+      "Participou na Estratégia RED-REC (MISAU/UNICEF/OMS) usando ODK para coleta de dados em campo",
     ],
     current: true,
   },
   {
-    period: "2021 - 2023",
-    title: "Desenvolvedor Full Stack",
-    company: "Startup Local",
-    logo: "🚀",
+    period: "Fevereiro 2024 - Abril 2024",
+    title: "Formador de Tecnologia",
+    company: "Universidade São Tomás de Moçambique (USTM)",
+    logo: "🎓",
     description:
-      "Desenvolvimento end-to-end de aplicações web e desktop, participando ativamente do crescimento da empresa desde seus primeiros dias até se tornar líder no mercado local.",
-    skills: ["C#", "React", "SQL Server", ".NET Core", "Azure", "Docker"],
+      "Ministrou treinamentos em ferramentas do Office 365 e participou ativamente na transformação digital da universidade, elaborando manuais e guias de referência.",
+    skills: [
+      "Office 365",
+      "Formação",
+      "Documentação Técnica",
+      "Transformação Digital",
+    ],
     achievements: [
-      "Participou do crescimento da empresa de 5 para 25 funcionários",
-      "Arquitetou e desenvolveu 3 produtos principais da empresa",
-      "Implementou arquitetura microserviços melhorando performance em 60%",
-      "Mentoreou 2 desenvolvedores junior durante o crescimento da equipe",
+      "Ministrou treinamentos em ferramentas do Office 365 para docentes e funcionários",
+      "Participou activamente na transformação digital da universidade",
+      "Elaborou manuais e guias de referência para uso das ferramentas",
+      "Contribuiu para a modernização dos processos académicos",
+    ],
+    current: false,
+  },
+  {
+    period: "2020 - 2024",
+    title: "Estudante & Desenvolvedor",
+    company: "USTM & Projetos Pessoais",
+    logo: "💻",
+    description:
+      "Desenvolvimento de competências em programação actravés da licenciatura em Desenvolvimento de Software e participação em projetos pessoais, hackathons e equipes independentes.",
+    skills: [
+      "HTML/CSS/JavaScript",
+      "TypeScript",
+      "React",
+      "React Native",
+      "PHP",
+      "C#",
+      "ASP.NET",
+      "SQL",
+      "Git",
+    ],
+    achievements: [
+      "1º lugar na 1ª edição do Hackathon da USTM",
+      "Participou no desenvolvimento do módulo de empresas da aplicação MãeBiz (React Native)",
+      "Colaborou com equipe independente: Room",
+      "Escreveu artigos técnicos no Medium",
     ],
     current: false,
   },
@@ -75,7 +112,7 @@ function createTimelineItem(data, index) {
   const achievementsHTML = data.achievements
     .map(
       (achievement) =>
-        `<li class="achievement-item">${escapeHTML(achievement)}</li>`
+        `<li class="achievement-item">${escapeHTML(achievement)}</li>`,
     )
     .join("");
 
@@ -173,7 +210,7 @@ function renderExperience(container) {
     {
       threshold: 0.2,
       rootMargin: "0px 0px -50px 0px",
-    }
+    },
   );
 
   container
@@ -185,8 +222,12 @@ function escapeHTML(s) {
   return String(s).replace(
     /[&<>"']/g,
     (c) =>
-      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" }[
-        c
-      ])
+      ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;",
+      })[c],
   );
 }

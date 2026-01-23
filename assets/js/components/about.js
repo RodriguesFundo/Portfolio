@@ -20,43 +20,33 @@ function initializeAbout() {
 function renderAbout(container) {
   container.innerHTML = `
     <div class="about-text">
-      <h3>Desenvolvedor Mobile & Full Stack</h3>
+      <h3>Desenvolvedor Full Stack</h3>
       <p>
-        Sou um jovem desenvolvedor apaixonado por tecnologia e inovação.
-        Com experiência sólida em desenvolvimento mobile usando React
-        Native, também trabalho com tecnologias web e desktop.
+        Sou um desenvolvedor Full Stack com aproximadamente 4 anos de experiência 
+        em desenvolvimento de software, atuando em projetos de saúde pública e 
+        sistemas de informação.
       </p>
       <p>
-        Atualmente, contribuo para a digitalização de processos
-        hospitalares no Ministério da Saúde, desenvolvendo soluções que
-        impactam positivamente a vida das pessoas.
+        Actualmente, trabalho no Ministério da Saúde (MISAU) desenvolvendo o Sistema 
+        de Informação Hospitalar implementado nas unidades sanitárias da província 
+        de Maputo. Participei do lançamento do primeiro hospital digital de Moçambique, 
+        no Hospital Geral de Mavalane, e lidero tecnicamente o desenvolvimento do 
+        Sistema de Gestão Centralizada de Unidades Sanitárias.
       </p>
-
-      <div class="about-stats">
-        <div class="stat-item">
-          <span class="stat-number">2+</span>
-          <span class="stat-label">Anos de Experiência</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">15+</span>
-          <span class="stat-label">Projetos Concluídos</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number">100%</span>
-          <span class="stat-label">Dedicação</span>
-        </div>
-      </div>
-
+      <p>
+        Formado em Desenvolvimento de Software pela Universidade São Tomás de 
+        Moçambique (USTM).
+      </p>
     </div>
 
     <div class="about-image">
       <div class="image-wrapper">
-        <img src="assets/img/I.JPG" alt="Rodrigues Fundo coding" />
+        <img src="assets/img/I.JPG" alt="Rodrigues Fundo" />
         <div class="tech-badges">
-          <span class="tech-badge">React Native</span>
-          <span class="tech-badge">JavaScript</span>
-          <span class="tech-badge">C#</span>
+          <span class="tech-badge">React</span>
+          <span class="tech-badge">Node.js</span>
           <span class="tech-badge">PHP</span>
+          <span class="tech-badge">ASP.NET</span>
         </div>
       </div>
     </div>

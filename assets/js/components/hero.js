@@ -29,8 +29,8 @@ function renderHero(container) {
         <span class="cursor">|</span>
       </p>
       <p class="hero-description">
-        Desenvolvedor Mobile especializado em React Native, criando
-        experiências digitais inovadoras e funcionais.
+        Desenvolvedor Full Stack em especialização na criação de soluções digitais
+        para a saúde.
       </p>
       <div class="hero-buttons">
         <div class="hero-buttons-row">
@@ -59,7 +59,7 @@ function renderHero(container) {
 
     <div class="hero-image">
       <div class="hero-avatar">
-        <img src="assets/img/I.JPG" alt="Rodrigues Fundo" />
+        <img src="assets/img/I.JPG" alt="Rodrigues Fundo - Desenvolvedor Full Stack" />
         <div class="avatar-ring"></div>
       </div>
     </div>
