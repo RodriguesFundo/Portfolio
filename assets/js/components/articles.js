@@ -74,11 +74,7 @@ function renderArticles(container) {
           Ver mais <i class="fas fa-arrow-right"></i>
         </a>
         `
-            : `
-        <div class="article-link-disabled" style="opacity: 0.5; cursor: default;">
-          Mais informações em breve
-        </div>
-        `
+            : ""
         }
       </div>
     `;
