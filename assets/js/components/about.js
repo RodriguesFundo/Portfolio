@@ -42,12 +42,7 @@ function renderAbout(container) {
     <div class="about-image">
       <div class="image-wrapper">
         <img src="assets/img/dev.jpeg" alt="Rodrigues Fundo" />
-        <div class="tech-badges">
-          <span class="tech-badge">React</span>
-          <span class="tech-badge">Node.js</span>
-          <span class="tech-badge">PHP</span>
-          <span class="tech-badge">ASP.NET</span>
-        </div>
+
       </div>
     </div>
   `;
