@@ -41,7 +41,7 @@ function renderAbout(container) {
 
     <div class="about-image">
       <div class="image-wrapper">
-        <img src="assets/img/I.JPG" alt="Rodrigues Fundo" />
+        <img src="assets/img/dev.jpeg" alt="Rodrigues Fundo" />
         <div class="tech-badges">
           <span class="tech-badge">React</span>
           <span class="tech-badge">Node.js</span>
