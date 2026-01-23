@@ -493,13 +493,6 @@ body {
   line-height: 1.8;
 }
 
-.about-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-top: 40px;
-}
-
 .stat-item {
   text-align: center;
   padding: 20px;
@@ -2116,10 +2109,6 @@ body {
     padding: 16px 22px;
   }
 
-  .about-stats {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
 
   .skills-content {
     grid-template-columns: 1fr;
