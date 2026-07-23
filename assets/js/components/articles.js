@@ -39,6 +39,16 @@ const articlesData = [
     link: "https://github.com/room-organization",
   },
   {
+    title: "Análise de Dados em Sistemas de Saúde",
+    excerpt:
+      "Participação na triangulação e análise de dados logísticos provenientes dos sistemas SISMA e SELV, com foco na melhoria da qualidade dos dados.",
+    tags: ["SISMA", "SELV", "Análise de Dados", "Saúde Pública"],
+    date: "2024",
+    image:
+      "https://saudedigital.misau.gov.mz/wp-content/uploads/2024/10/SIS_H.jpeg",
+    link: "#",
+  },
+  {
     title: "Estratégia RED-REC (MISAU/UNICEF/OMS)",
     excerpt:
       "Envolvimento em atividades da estratégia RED-REC (Reaching Every District/Reaching Every Community), apoiada pela UNICEF, com foco na imunização de rotina e mobilização comunitária.",

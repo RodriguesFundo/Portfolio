@@ -20,22 +20,24 @@ function initializeAbout() {
 function renderAbout(container) {
   container.innerHTML = `
     <div class="about-text">
-      <h3>Desenvolvedor Full Stack</h3>
+      <h3>Desenvolvedor Full Stack de Software</h3>
       <p>
-        Sou um desenvolvedor Full Stack com aproximadamente 4 anos de experiência 
-        em desenvolvimento de software, atuando em projetos de saúde pública e 
-        sistemas de informação.
+        Desenvolvedor Full Stack com aproximadamente 4 anos de experiência em
+        desenvolvimento de software, projetos de saúde pública, sistemas de
+        informação e coordenação técnica de equipas.
       </p>
       <p>
-        Actualmente, trabalho no Ministério da Saúde (MISAU) desenvolvendo o Sistema 
-        de Informação Hospitalar implementado nas unidades sanitárias da província 
-        de Maputo. Participei do lançamento do primeiro hospital digital de Moçambique, 
-        no Hospital Geral de Mavalane, e lidero tecnicamente o desenvolvimento do 
-        Sistema de Gestão Centralizada de Unidades Sanitárias.
+        Actualmente, trabalho no Ministério da Saúde (MISAU) no desenvolvimento do
+        Sistema de Informação Hospitalar utilizado em unidades sanitárias nacionais,
+        com participação no lançamento do primeiro hospital digital de Moçambique no
+        Hospital Geral de Mavalane. Lidero tecnicamente o Sistema de Gestão
+        Centralizada de Unidades Sanitárias e desenvolvo aplicações móveis em
+        CommCare/CommCareHQ para o sistema upSCALE.
       </p>
       <p>
-        Formado em Desenvolvimento de Software pela Universidade São Tomás de 
-        Moçambique (USTM).
+        Licenciado em Desenvolvimento de Software pela Universidade São Tomás de
+        Moçambique (USTM), 2020–2024. Certificado em CommCare/CommCareHQ para
+        desenvolvimento e configuração de aplicações móveis.
       </p>
     </div>
 

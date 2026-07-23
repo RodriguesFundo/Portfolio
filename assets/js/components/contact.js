@@ -20,7 +20,7 @@ function initializeContact() {
 }
 
 const contactData = {
-  location: "Matola, Maputo, Moçambique",
+  location: "Maputo, Matola, Vale do Infulene",
   phoneDisplay: "+258 84 26 88 078",
   phoneHref: "+258842688078",
   email: "rodriguesdomingosf@gmail.com",
