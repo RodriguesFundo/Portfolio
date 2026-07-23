@@ -29,8 +29,8 @@ function renderHero(container) {
         <span class="cursor">|</span>
       </p>
       <p class="hero-description">
-        Desenvolvedor Full Stack em especialização na criação de soluções digitais
-        para a saúde.
+        Desenvolvedor Full Stack de Software · Sistemas de Informação em Saúde ·
+        Saúde Digital · MISAU
       </p>
       <div class="hero-buttons">
         <div class="hero-buttons-row">

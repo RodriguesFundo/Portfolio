@@ -45,6 +45,12 @@ const skillsData = {
         icon: "fas fa-paint-brush",
         description: "Framework CSS utility-first",
       },
+      {
+        name: "Bootstrap",
+        level: 75,
+        icon: "fab fa-bootstrap",
+        description: "Framework CSS responsivo",
+      },
     ],
   },
   backend: {
@@ -80,6 +86,24 @@ const skillsData = {
         level: 70,
         icon: "fas fa-code",
         description: "Framework minimalista para Node.js",
+      },
+      {
+        name: "NestJS",
+        level: 70,
+        icon: "fas fa-layer-group",
+        description: "Framework Node.js escalável e estruturado",
+      },
+      {
+        name: "CodeIgniter",
+        level: 65,
+        icon: "fab fa-php",
+        description: "Framework PHP leve para aplicações web",
+      },
+      {
+        name: "ASP.NET",
+        level: 70,
+        icon: "fab fa-microsoft",
+        description: "Framework Microsoft para aplicações web e APIs",
       },
       {
         name: "REST APIs",
@@ -170,6 +194,42 @@ const skillsData = {
         level: 70,
         icon: "fab fa-linux",
         description: "Sistema operacional e administração",
+      },
+      {
+        name: "CI/CD",
+        level: 65,
+        icon: "fas fa-sync-alt",
+        description: "Integração e entrega contínua de software",
+      },
+      {
+        name: "ODK",
+        level: 70,
+        icon: "fas fa-clipboard-list",
+        description: "Recolha e registo de dados em campo",
+      },
+    ],
+  },
+  health: {
+    title: "Saúde Digital",
+    icon: "fas fa-heartbeat",
+    skills: [
+      {
+        name: "OpenMRS",
+        level: 70,
+        icon: "fas fa-hospital",
+        description: "Plataforma open source de registos médicos eletrónicos",
+      },
+      {
+        name: "CommCare",
+        level: 75,
+        icon: "fas fa-mobile-alt",
+        description: "Aplicações móveis para recolha de dados em saúde",
+      },
+      {
+        name: "CommCareHQ",
+        level: 75,
+        icon: "fas fa-cloud",
+        description: "Plataforma de gestão e deploy de apps CommCare",
       },
     ],
   },

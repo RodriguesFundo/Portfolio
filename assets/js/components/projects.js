@@ -10,7 +10,7 @@ function initializeProjects() {
     {
       title: "Sistema de Informação Hospitalar (SIS-H)",
       description:
-        "Sistema para digitalização de processos hospitalares no âmbito do SIS-H. O projeto foi implementado no Hospital Geral de Mavalane, marcando a criação do primeiro hospital digital de Moçambique.",
+        "Sistema para digitalização de processos hospitalares no âmbito do SIS-H, utilizado em unidades sanitárias nacionais. Implementado no Hospital Geral de Mavalane, marcando a criação do primeiro hospital digital de Moçambique.",
       tech: ["React", "Node.js", "PostgreSQL", "Docker", "REST APIs"],
       type: "web",
       image:
@@ -30,6 +30,19 @@ function initializeProjects() {
       live: "#",
       repo: "#",
       date: "2025-10-15",
+      featured: true,
+    },
+    {
+      title: "upSCALE — Aplicações CommCare",
+      description:
+        "Desenvolvimento de aplicações móveis em CommCare/CommCareHQ para o sistema upSCALE, incluindo instalação, configuração e deploy em servidores do MISAU.",
+      tech: ["CommCare", "CommCareHQ", "ODK", "React Native"],
+      type: "mobile",
+      image:
+        "https://saudedigital.misau.gov.mz/wp-content/uploads/2024/10/SIS_H.jpeg",
+      live: "#",
+      repo: "#",
+      date: "2025-06-01",
       featured: true,
     },
     {

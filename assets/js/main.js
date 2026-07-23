@@ -134,10 +134,10 @@ function initTypingAnimation() {
   if (!typedText) return;
 
   const texts = [
-    "Desenvolvedor Mobile",
-    "Especialista React Native",
     "Desenvolvedor Full Stack",
-    "Apaixonado por Tecnologia",
+    "Sistemas de Informação em Saúde",
+    "Saúde Digital",
+    "Especialista React Native",
   ];
 
   let textIndex = 0;
